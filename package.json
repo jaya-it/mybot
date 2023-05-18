@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "npm i pm2 && pm2 start index.js && pm2 save && pm2 logs"
   },
   "keywords": [
     "termux",
@@ -21,7 +21,7 @@
   "author": "AdrianTzy",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys" : "github:AdrianTzy/Baileys",
+    "@adiwajshing/baileys" : "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@bochilteam/scraper": "^4.0.22-alpha.0",
@@ -59,8 +59,7 @@
     "remove.bg": "^1.3.0",
     "scrape-primbon": "^1.1.0",
     "util": "^0.12.4",
-    "yargs": "^17.2.1",
-    "yt-search": "^2.10.4"
+    "yargs": "^17.2.1"
   },
   "directories": {
     "lib": "lib",
