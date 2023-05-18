@@ -1,8 +1,3 @@
-/**
-    * Created By AdrianTzy
-    * And XTRAM-TEAM
-    * FORGET TO SUBSCRIBER
-*/
 require('./config')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
@@ -125,7 +120,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         var ucapanWaktu = 'Selamat Tengah Malam 🌃'
 }
 
-        //Created By AdrianTzy
+        //Created By ClevvBotz
         const HBD = new Date(`${global.ultah} 00:00:00`).getTime();
         const sekarang = new Date().getTime();
         const Selisih = HBD - sekarang;
@@ -136,7 +131,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         const menuju = `${jhari}Hari ${jjam}Jam ${mmmenit}Menit ${ddetik}Detik`
         
         //buttons Tambahan
-        const ntiktok = ('© AdrianTzy')
+        const ntiktok = ('© jaya26editz')
         const ini_mark = `0@s.whatsapp.net`
         const ownernya = ownernomer + '@s.whatsapp.net'
         
@@ -154,7 +149,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
             thumbnail: thumb,
             surface: 200,
             message: `${ttname}`,
-            orderTitle: 'AdrianTzy',
+            orderTitle: 'ClevvBotz',
             sellerJid: '0@s.whatsapp.net'
         }
     },
@@ -396,13 +391,13 @@ const fakestatus = {
             if (typeof chats !== 'object') global.db.data.chats[m.chat] = {}
             if (chats) {
                 if (!('mute' in chats)) chats.mute = false
-                if (!('antilink' in chats)) chats.antilink = false
+                if (!('antilink' in chats)) chats.antilink = true
                 if (!('antilinkyt' in chats)) chats.antilinkyt = false
                 if (!('antilinktt' in chats)) chats.antilinktt = false
                 if (!('antivirtex' in chats)) chats.antivirtex = true
             } else global.db.data.chats[m.chat] = {
                 mute: false,
-                antilink: false,
+                antilink: true,
                 antilinkyt: false,
                 antilinktt: false,
                 antivirtex: true,
@@ -478,7 +473,7 @@ const fakestatus = {
 	    if (new Date() * 1 - setting.status > 1000) {
 		let _uptime = process.uptime() * 1000
 		let uptime = clockString(_uptime)
-		await conn.updateProfileStatus(`I am ${namabot} | Aktif Selama ${uptime} ⏳ | Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode 👤'} | User : ${Object.keys(global.db.data.users).length} 👥| Jangan Telp Bot 📞 | © Created AdrianTzy`).catch(_ => _)
+		await conn.updateProfileStatus(`I am ${namabot} | Aktif Selama ${uptime} ⏳ | Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode 👤'} | User : ${Object.keys(global.db.data.users).length} 👥| Jangan Telp Bot 📞 | © Created Mr.Clevv`).catch(_ => _)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -538,13 +533,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakasahotak[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak asahotak',
-                    buttonText: {
-                        displayText: '⌲ Tebak Asah Otak'
-                    },
-                    type: 1
-                }], `🎮 Asah Otak 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Asah Otak 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak asahotak untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakasahotak[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -556,13 +545,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksiapakahaku[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak siapakahaku',
-                    buttonText: {
-                        displayText: '⌲ Tebak Siapkah Aku'
-                    },
-                    type: 1
-                }], `🎮 Siapakah Aku 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Siapakah Aku 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak siapakahaku untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaksiapakahaku[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -574,13 +557,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak susunkata',
-                    buttonText: {
-                        displayText: '⌲ Tebak Susun Kata'
-                    },
-                    type: 1
-                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak susunkata untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -592,13 +569,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakbendera[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak bendera',
-                    buttonText: {
-                        displayText: '⌲ Tebak Bendera'
-                    },
-                    type: 1
-                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakbendera untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakbendera[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -610,13 +581,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakbendera2[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak bendera2',
-                    buttonText: {
-                        displayText: '⌲ Tebak Bendera 2'
-                    },
-                    type: 1
-                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakbendera2 untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakbendera2[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -628,13 +593,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkabupaten[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kabupaten',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kabupaten'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kabupaten 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kabupaten 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kabupaten untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakkabupaten[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -646,13 +605,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak susunkata',
-                    buttonText: {
-                        displayText: '⌲ Tebak Susun Kata'
-                    },
-                    type: 1
-                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak susunkata untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -664,13 +617,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkimia[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kimia',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kimia'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kimia 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kimia 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kimia untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakkimia[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -682,13 +629,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaktekateki[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak tekateki',
-                    buttonText: {
-                        displayText: '⌲ Tebak Teka Teki'
-                    },
-                    type: 1
-                }], `🎮 Teka Teki 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Teka Teki 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tekateki untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaktekateki[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -700,13 +641,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaklagu[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak lagu',
-                    buttonText: {
-                        displayText: '⌲ Tebak Lagu'
-                    },
-                    type: 1
-                }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lagu untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaklagu[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -730,13 +665,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakgambar[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak gambar',
-                    buttonText: {
-                        displayText: '⌲ Tebak Gambar'
-                    },
-                    type: 1
-                }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak gambar untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakgambar[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -748,13 +677,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kata',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kata'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kata untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -767,13 +690,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete caklontong[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak lontong',
-                    buttonText: {
-                        displayText: '⌲ Tebak Lontong'
-                    },
-                    type: 1
-                }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lontong untuk bermain lagi`, { quoted: fakestatus })
                 delete caklontong[m.sender.split('@')[0]]
                 delete caklontong_desk[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
@@ -786,13 +703,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kalimat',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kalimat'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kalimat untuk bermain lagi`, { quoted: fakestatus })
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -804,13 +715,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaklirik[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak lirik',
-                    buttonText: {
-                        displayText: '⌲ Tebak Lirik'
-                    },
-                    type: 1
-                }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lirik untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaklirik[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -822,13 +727,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendButtonText(m.chat, [{
-                    buttonId: 'tebak tebakan',
-                    buttonText: {
-                        displayText: '⌲ Tebak Tebakan'
-                    },
-                    type: 1
-                }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
+                await conn.sendMessage(m.chat, { text: `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakan untuk bermain lagi`, { quoted: fakestatus })
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -844,6 +743,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (isgclink) return m.reply(`Ehh Maaf Gak Jadi, Link Group Ini Ternyata 😆`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -854,6 +754,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -864,6 +765,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -875,6 +777,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -1253,12 +1156,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
  *TERIMA KASIH KEPADA*
 • *Allah Swt.*
 • *My Parent*
-• *AdrianTzy*
+• *ClevvBotz*
 • *Danu57P*
 • *Reii Code*
 • *WH MODS*
 • *YogzzDevX*
 • *KilersBotz*
+• *4ksanzz*
 • *LuckyCat*
 • *Rullxzz*
 • *Darkness*
@@ -1481,13 +1385,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak lagu',
-                            buttonText: {
-                                displayText: '⌲ Tebak Lagu'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lagu` }, { quoted: fakestatus })
                         delete tebaklagu[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'gambar') {
@@ -1500,13 +1398,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak gambar',
-                            buttonText: {
-                                displayText: '⌲ Tebak Gambar'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak gambar` }, { quoted: fakestatus })
                         delete tebakgambar[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kata') {
@@ -1519,13 +1411,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak kata',
-                            buttonText: {
-                                displayText: '⌲ Tebak Kata'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kata` }, { quoted: fakestatus })
                         delete tebakkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kalimat') {
@@ -1538,13 +1424,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak kalimat',
-                            buttonText: {
-                                displayText: '⌲ Tebak Kalimat'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kalimat` }, { quoted: fakestatus })
                         delete tebakkalimat[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lirik') {
@@ -1557,13 +1437,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak lirik',
-                            buttonText: {
-                                displayText: '⌲ Tebak Lirik'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lirik` }, { quoted: fakestatus })
                         delete tebaklirik[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'tebakan') {
@@ -1576,13 +1450,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak tebakan',
-                            buttonText: {
-                                displayText: '⌲ Tebak Tebakan'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaktebakan[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaktebakan[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak tebakan` }, { quoted: fakestatus })
                         delete tebaktebakan[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lontong') {
@@ -1596,13 +1464,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak lontong',
-                            buttonText: {
-                                displayText: '⌲ Tebak Lontong'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lontong` }, { quoted: fakestatus })
                         delete caklontong[m.sender.split('@')[0]]
                         delete caklontong_desk[m.sender.split('@')[0]]
                     }
@@ -1616,13 +1478,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.name)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak bendera',
-                            buttonText: {
-                                displayText: '⌲ Tebak Bendera'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakbendera[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakbendera[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak bendera` }, { quoted: fakestatus })
                         delete tebakbendera[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'bendera2') {
@@ -1635,13 +1491,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakbendera2.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.name)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak bendera',
-                            buttonText: {
-                                displayText: '⌲ Tebak Bendera'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakbendera2[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakbendera2[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak bendera2` }, { quoted: fakestatus })
                         delete tebakbendera2[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kabupaten') {
@@ -1654,13 +1504,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.title)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak kabupaten',
-                            buttonText: {
-                                displayText: '⌲ Tebak Kabupaten'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakkabupaten[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkabupaten[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kabupaten` }, { quoted: fakestatus })
                         delete tebakkabupaten[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kimia') {
@@ -1673,13 +1517,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkimia.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.lambang)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak kimia',
-                            buttonText: {
-                                displayText: '⌲ Tebak Kimia'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakkimia[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkimia[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kimia` }, { quoted: fakestatus })
                         delete tebakkimia[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'asahotak') {
@@ -1692,13 +1530,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakasahotak.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak asahotak',
-                            buttonText: {
-                                displayText: '⌲ Tebak Asah Otak'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebakasahotak[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakasahotak[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak asahotak` }, { quoted: fakestatus })
                         delete tebakasahotak[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'siapakahaku') {
@@ -1711,13 +1543,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaksiapakahaku.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak siapakahaku',
-                            buttonText: {
-                                displayText: '⌲ Tebak Siapakah Aku'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaksiapakahaku[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaksiapakahaku[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak siapakahaku` }, { quoted: fakestatus })
                         delete tebaksiapakahaku[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'susunkata') {
@@ -1730,13 +1556,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak susunkata',
-                            buttonText: {
-                                displayText: '⌲ Tebak Susun Kata'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaksusunkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaksusunkata[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak susunkata` }, { quoted: fakestatus })
                         delete tebaksusunkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'tekateki') {
@@ -1749,13 +1569,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaktekateki.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendButtonText(m.chat, [{
-                            buttonId: 'tebak tekateki',
-                            buttonText: {
-                                displayText: '⌲ Tebak Teka Teki'
-                            },
-                            type: 1
-                        }], `Waktu Habis\nJawaban:  ${tebaktekateki[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
+                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaktekateki[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak tekateki` }, { quoted: fakestatus })
                         delete tebaktekateki[m.sender.split('@')[0]]
                     }
                 }
@@ -1792,16 +1606,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
                 let ments = [me, jodoh]
-                let buttons = [{
-                    buttonId: 'jodohku',
-                    buttonText: {
-                        displayText: '⌲ Jodohku'
-                    },
-                    type: 1
-                }]
-                await conn.sendButtonText(m.chat, buttons, jawab, ntiktok, fakestatus, {
-                    mentions: ments
-                })
+                await conn.sendMessage(m.chat, { text: jawab }, { quoted: fakestatus, mentions: ments })
             }
             break
             case 'jadian': {
@@ -1815,16 +1620,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 
 @${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
                 let menst = [orang, jodoh]
-                let buttons = [{
-                    buttonId: 'jadian',
-                    buttonText: {
-                        displayText: '⌲ Jadiin'
-                    },
-                    type: 1
-                }]
-                await conn.sendButtonText(m.chat, buttons, jawab, ntiktok, fakestatus, {
-                    mentions: menst
-                })
+                await conn.sendMessage(m.chat, { text: jawab }, { quoted: fakestatus, mentions: ments })
             }
             break
             case 'tagmenu': {
@@ -1852,10 +1648,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let oranag = membear[Math.floor(Math.random() * membear.length)]
 					let teks = `Nih beban Grup @${oranag.split('@')[0]}`
 					let meanst = [oranag]
-            let buttaons = [
-                        { buttonId: 'bebangrup', buttonText: { displayText: '⌲ Beban' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttaons, teks, ntiktok, fakestatus, {mentions: meanst})
+                    await conn.sendMessage(m.chat, { text: teks }, { quoted: fakestatus, mentions: meanst })
                     }
             break
 			case 'babigrup': {
@@ -1864,10 +1657,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let orag = memberr[Math.floor(Math.random() * memberr.length)]
 					let ters = `Nih babi di Grup @${orag.split('@')[0]}, jangan baper yak:v`
 					let meansrt = [orag]
-            let buttns = [
-                        { buttonId: 'babigrup', buttonText: { displayText: '⌲ Babi' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttns, ters, ntiktok, fakestatus, {mentions: meansrt})
+                    await conn.sendMessage(m.chat, { text: ters }, { quoted: fakestatus, mentions: meansrt })
                     }
             break
 			case 'kerengrup': {
@@ -1876,10 +1666,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let oranng = krn[Math.floor(Math.random() * krn.length)]
 					let texx = `Wihh si keren kita nih 😎 @${oranng.split('@')[0]}`
 					let mesrt = [oranng]
-            let butons = [
-                        { buttonId: 'kerengrup', buttonText: { displayText: '⌲ Keren' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, butons, texx, ntiktok, fakestatus, {mentions: mesrt})
+                    await conn.sendMessage(m.chat, { text: texx }, { quoted: fakestatus, mentions: mesrt })
                     }
             break
 			case 'cantikgrup': {
@@ -1888,10 +1675,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap1 = cantik1[Math.floor(Math.random() * cantik1.length)]
 					let vio1 = `Wihh si paling cute dan cantik ☺ @${mantap1.split('@')[0]}`
 					let men1 = [mantap1]
-            let butons1 = [
-                        { buttonId: 'cantikgrup', buttonText: { displayText: '⌲ Cantik' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, butons1, vio1, ntiktok, fakestatus, {mentions: men1})
+                    await conn.sendMessage(m.chat, { text: vio1 }, { quoted: fakestatus, mentions: men1 })
                     }
             break
 			case 'gantenggrup': {
@@ -1900,10 +1684,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap2 = gtg1[Math.floor(Math.random() * gtg1.length)]
 					let vio2 = `Anjayyy sungkem si paling ganteng😎😆 @${mantap2.split('@')[0]}`
 					let men2 = [mantap2]
-            let butons2 = [
-                        { buttonId: 'gantenggrup', buttonText: { displayText: '⌲ Ganteng' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, butons2, vio2, ntiktok, fakestatus, {mentions: men2})
+                    await conn.sendMessage(m.chat, { text: vio2 }, { quoted: fakestatus, mentions: men2 })
                     }
             break
 			case 'pintargrup': {
@@ -1912,10 +1693,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap3 = pintaar[Math.floor(Math.random() * pintaar.length)]
 					let vio3 = `Ayo belajar biar pinter kek @${mantap3.split('@')[0]}`
 					let men3 = [mantap3]
-            let butons3 = [
-                        { buttonId: 'pintargrup', buttonText: { displayText: '⌲ Pintar' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, butons3, vio3, ntiktok, fakestatus, {mentions: men3})
+                    await conn.sendMessage(m.chat, { text: vio3 }, { quoted: fakestatus, mentions: men3 })
                     }
             break
 			case 'wibugrup': {
@@ -1924,10 +1702,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap4 = wibu[Math.floor(Math.random() * wibu.length)]
 					let vio4 = `Anjayy si pemuja anime @${mantap4.split('@')[0]}`
 					let men4 = [mantap4]
-            let butons4 = [
-                        { buttonId: 'wibugrup', buttonText: { displayText: '⌲ WIBU' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, butons4, vio4, ntiktok, fakestatus, {mentions: men4})
+                    await conn.sendMessage(m.chat, { text: vio4 }, { quoted: fakestatus, mentions: men4 })
                     }
             break
             case 'react': {
@@ -1943,7 +1718,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
             case 'shutdown': {
              if (!isCreator) return mess.owner
-			 m.reply(`Otsukaresama deshita🖐`)
+			 m.reply(`Bot ini akan dimatikan\n\nSayonara👋`)
              await sleep(3000)
              process.exit()
              }
@@ -2163,22 +1938,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilink = false
                     m.reply(`Antilink Group WhatsApp Nonaktif 🕊️`)
                 } else {
-                    let buttons = [{
-                            buttonId: 'antilink on',
-                            buttonText: {
-                                displayText: 'On'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'antilink off',
-                            buttonText: {
-                                displayText: 'Off'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
+                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
                 }
             }
             break
@@ -2195,22 +1955,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilinkyt = false
                     m.reply(`Antilink YouTube Nonaktif 🕊️`)
                 } else {
-                    let buttons = [{
-                            buttonId: 'antilinkyt on',
-                            buttonText: {
-                                displayText: 'On'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'antilinkyt off',
-                            buttonText: {
-                                displayText: 'Off'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
+                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
                 }
             }
             break
@@ -2227,22 +1972,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilinktt = false
                     m.reply(`Antilink TikTok Nonaktif 🕊️`)
                 } else {
-                    let buttons = [{
-                            buttonId: 'antilinktt on',
-                            buttonText: {
-                                displayText: 'On'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'antilinktt off',
-                            buttonText: {
-                                displayText: 'Off'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
+                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
                 }
             }
             break
@@ -2259,22 +1989,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].mute = false
                     m.reply(`${ntiktok} telah di unmute di group ini 🕊️`)
                 } else {
-                    let buttons = [{
-                            buttonId: 'mute on',
-                            buttonText: {
-                                displayText: 'On'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'mute off',
-                            buttonText: {
-                                displayText: 'Off'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
+                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
                 }
             }
             break
@@ -2291,18 +2006,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 } else if (args[0] === 'off') {
                     await conn.groupToggleEphemeral(m.chat, 0).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                let sections = [
-                {
-                title: "CHANGE EFFECTIVE GROUP",
-                rows: [
-                {title: "⌲ Ephemeral 1 day", rowId: `ephemeral 1`, description: `Activate the ephemeral group for 1 day`},
-                {title: "⌲ Ephemeral 7 day's", rowId: `ephemeral 7`, description: `Activate the ephemeral group for 7 day's`},
-                {title: "⌲ Ephemeral 90 days's", rowId: `ephemeral 90`, description: `Activate the ephemeral group for 90 day's`},
-                {title: "⌲ Ephemeral Off", rowId: `ephemeral off`, description: `Deactivate this Ephemeral group`}
-                ]
-                },
-                ]
-                conn.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, ntiktok, `Hello Admin ${groupMetadata.subject}`, `Touch Me (⁠≧⁠▽⁠≦⁠)`, sections, floc)
+                conn.sendMessage(m.chat, { text: `Silakan pilih fitur pesan sementara\n\n• 1 Hari = ${prefix}${command} 1\n• 7 Hari = ${prefix}${command} 7\n• 90 Hari = ${prefix}${command} 90\n• Mematikan pesan sementara = ${prefix}${command} off\n\n*Pilih salah satu diatas untuk menerapkan fitur pesan sementara*`
                 }
             }
             break
@@ -2370,29 +2074,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 *${prefix}devote* - Untuk Tidak
 *${prefix}cekvote* - Untuk Mengecek Vote
 *${prefix}hapusvote* - Untuk Menghapus Vote`
-                let buttonsVote = [{
-                        buttonId: `${prefix}upvote`,
-                        buttonText: {
-                            displayText: '⌲ Upvote'
-                        },
-                        type: 1
-                    },
-                    {
-                        buttonId: `${prefix}devote`,
-                        buttonText: {
-                            displayText: '⌲ Devote'
-                        },
-                        type: 1
-                    }
-                ]
-
-                let buttonMessageVote = {
-                    text: teks_vote,
-                    footer: ntiktok,
-                    buttons: buttonsVote,
-                    headerType: 1
-                }
-                conn.sendMessage(m.chat, buttonMessageVote)
+                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
             }
             break
             case 'upvote': {
@@ -2427,30 +2109,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 *${prefix}hapusvote* - Untuk Menghapus Vote
 
 ©${conn.user.id}`
-                let buttonsUpvote = [{
-                        buttonId: `${prefix}upvote`,
-                        buttonText: {
-                            displayText: '⌲ Upvote'
-                        },
-                        type: 1
-                    },
-                    {
-                        buttonId: `${prefix}devote`,
-                        buttonText: {
-                            displayText: '⌲ Devote'
-                        },
-                        type: 1
-                    }
-                ]
-
-                let buttonMessageUpvote = {
-                    text: teks_vote,
-                    footer: ntiktok,
-                    buttons: buttonsUpvote,
-                    headerType: 1,
-                    mentions: menvote
-                }
-                conn.sendMessage(m.chat, buttonMessageUpvote)
+                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
             }
             break
             case 'devote': {
@@ -2485,30 +2144,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 *${prefix}hapusvote* - Untuk Menghapus Vote
 
 ©${conn.user.id}`
-                let buttonsDevote = [{
-                        buttonId: `${prefix}upvote`,
-                        buttonText: {
-                            displayText: '⌲ Upvote'
-                        },
-                        type: 1
-                    },
-                    {
-                        buttonId: `${prefix}devote`,
-                        buttonText: {
-                            displayText: '⌲ Devote'
-                        },
-                        type: 1
-                    }
-                ]
-
-                let buttonMessageDevote = {
-                    text: teks_vote,
-                    footer: ntiktok,
-                    buttons: buttonsDevote,
-                    headerType: 1,
-                    mentions: menvote
-                }
-                conn.sendMessage(m.chat, buttonMessageDevote)
+                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
             }
             break
 
@@ -2561,23 +2197,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 } else if (args[0] === 'open') {
                     await conn.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group 🕊️`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                    let buttons = [{
-                            buttonId: 'group open',
-                            buttonText: {
-                                displayText: 'Open'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'group close',
-                            buttonText: {
-                                displayText: 'Close'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} open/close`, fgclink)
-
+                    await conn.sendMessage(m.chat, { text: `Silahkan Ketik ${command} open/close` }, { quoted: fgclink })
                 }
             }
             break
@@ -2590,23 +2210,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 } else if (args[0] === 'close') {
                     await conn.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group 🕊️`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                    let buttons = [{
-                            buttonId: 'editinfo open',
-                            buttonText: {
-                                displayText: 'Open'
-                            },
-                            type: 1
-                        },
-                        {
-                            buttonId: 'editinfo close',
-                            buttonText: {
-                                displayText: 'Close'
-                            },
-                            type: 1
-                        }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `Mode Edit Info 🔥`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} open/close`, fgclink)
-
+                    await conn.sendMessage(m.chat, { text: `Silahkan Ketik ${command} open/close` }, { quoted: fgclink })                    
                 }
             }
             break
@@ -2648,23 +2252,21 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
                 for (let i of anu) {
                     await sleep(1500)
-                      let txt = `「 Broadcast Bot 」\n\n${text}`
-                      let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-await conn.sendButtonText(i, buttons, txt, ntiktok, m, {quoted: fkontak})
+                      let txt = `「 Group Broadcast 」\n\n${text}`
+                      await conn.sendMessage(i, { text: txt }, { quoted: fkontak })
                 }
                 m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
                 if (!isCreator) return mess.owner
-                if (!text) return `Text mana?\n\nContoh : ${prefix + command} Akame ><`
+                if (!text) return `Textnya mana?\n\nContoh : ${prefix + command} Akame ><`
                 let anu = await store.chats.all().map(v => v.id)
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
 		for (let yoi of anu) {
 		    await sleep(1500)
-		              let txt = `「 Broadcast Bot 」\n\n${text}`
-                      let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-            await conn.sendButtonText(yoi, buttons, txt, ntiktok, m, {quoted: fkontak})
+		              let txt = `「 Broadcast 」\n\n${text}`
+                      await conn.sendMessage(yoi, { text: txt }, { quoted: fkontak })
                 }
 		m.reply('Sukses Broadcast')
             }
@@ -3178,40 +2780,20 @@ break
                 gis(text, async (error, result) => {
                     n = result
                     images = n[Math.floor(Math.random() * n.length)].url
-                    let buttons = [{
-                        buttonId: `gimage ${text}`,
-                        buttonText: {
-                            displayText: '⌲ Next Image'
-                        },
-                        type: 1
-                    }]
-                    let buttonMessage = {
-                        image: {
-                            url: images
-                        },
-                        caption: `*-------「 GIMAGE SEARCH 」-------*\n🤠 *Query* : ${text}\n🔗 *Media Url* : ${images}`,
-                        footer: ntiktok,
-                        buttons: buttons,
-                        headerType: 4
-                    }
-                    conn.sendMessage(m.chat, buttonMessage, {
-                        quoted: fdoc
-                    })
+                    conn.sendMessage(m.chat, { image: { url: images }, caption: `*-------「 GIMAGE SEARCH 」-------*\n🤠 *Query* : ${text}\n🔗 *Media Url* : ${images}` }, { quoted: fdoc })
                 })
             }
             break
             case 'play': case 'ytplay': {
                 if (!text) return `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
+                let { play } = require('./lib/y2mate')
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-                let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
-                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: anu.thumbnail },
-                    caption: `
+                let quality = args[1] ? args[1] : '128kbps'
+                let media = await play(anu.url, quality)
+                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
+                let capt = `
 📄 Title : ${anu.title}
 🔎 Ext : Search
 📀 ID : ${anu.videoId}
@@ -3221,12 +2803,9 @@ break
 👨‍🎤 Author : ${anu.author.name}
 💻 Channel : ${anu.author.url}
 💬 Description : ${anu.description}
-🔗 Url : ${anu.url}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+🔗 Url : ${anu.url}`
+                conn.sendMessage(m.chat, { image: { url: anu.thumbnail }, caption: caption }, { quoted: m })
+                conn.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
 	    case 'ytmp3': case 'ytaudio': {
@@ -3291,17 +2870,7 @@ break
 		        let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                let buttons = [                   
-                    {buttonId: `pinterest ${text}`, buttonText: {displayText: '⌲ NEXT'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result },
-                    caption: `*Klik Next Untuk Melanjutkan*`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
+                conn.sendMessage(m.chat, { image: { url: result }, caption: `*${text}*` }, { quoted: fgclink })
             }
             break
             //Anime/Wibu
@@ -3320,92 +2889,28 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `${command}`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: { url: api('zahwa', '/randomanime/' + command, {}, 'apikey') },
-                    caption: `Random Image ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: { url: api('zahwa', '/randomanime/' + command, {}, 'apikey') }, caption: `Random Image ${command}`, { quoted: fdoc })
             }
             break
             case 'kitagawa': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `kitagawa`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: { url: api('zahwa', '/randomanime/marin-kitagawa', {}, 'apikey') },
-                    caption: `Random Image Marin Kitagawa`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/marin-kitagawa', {}, 'apikey') }, caption: `Random Image Marin Kitagawa`, { quoted: fdoc })
             }
             break
             case 'calliope': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `calliope`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: { url: api('zahwa', '/randomanime/mori-calliope', {}, 'apikey') },
-                    caption: `Random Image Mori Calliope`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/mori-calliope', {}, 'apikey') }, caption: `Random Image Mori Calliope`, { quoted: fdoc })
             }
             break
             case 'raiden': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `raiden`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: { url: api('zahwa', '/randomanime/raiden-shogun', {}, 'apikey') },
-                    caption: `Random Image Raiden Shogun`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/raiden-shogun', {}, 'apikey') }, caption: `Random Image Raiden Shogun`, { quoted: fdoc })
             }
             break
             case 'hutao': case 'xiao': case 'chongyun': case 'baal': case 'keqing': case 'yae': case 'zhongli': case 'ningguang': case 'shenhe': case 'ayaka': {
@@ -3416,40 +2921,15 @@ break
                 gis(command + 'Icon HD', async (error, result) => {
                 n = result
                 images = n[Math.floor(Math.random() * n.length)].url
-                let buttons = [
-                            {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
-                        ]
-                        let buttonMessage = {
-                            image: { url: images },
-                            caption: `Random Image ${command}`, 
-                            footer: ntiktok,
-                            buttons: buttons,
-                            headerType: 4
-                        }
-                        conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: { url: images }, caption: `Random Image ${command}` }, { quoted: fdoc })
                 })
                 }
                 break
-            case 'waifu': {
-            	tesk = `*${ucapanWaktu} Kak ${pushname}*\n*Silahkan Pilih Dibawah Ini*\n\n_Dosa Tanggung Sendiri :v_`
-            	let buttons = [{buttonId: `menu`, buttonText: {displayText: '📚MENU'}, type: 1},{buttonId: `sfw`, buttonText: {displayText: '✅SFW'}, type: 1}]
-                await conn.sendButtonText(m.chat, buttons, tesk, ntiktok, m, {quoted: fkontak})
-            	}
-            break
-            case 'sfw': {
+            case 'sfw': case: 'waifu': {
             	m.reply(mess.wait)
                 anu = await fetchJson(`https://waifu.pics/api/sfw/waifu`)
                 buffer = await getBuffer(anu.url)
-                let buttons = [{buttonId: `sfw`, buttonText: {displayText: '⌲ Next Image'}, type: 1},{buttonId: `command`, buttonText: {displayText: '📮Menu'}, type: 1}]
-                let buttonMessage = {
-                    image: buffer,
-                    fileLength: jumlah,
-                    caption: `Random Waifu`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: buffer }, caption: `Random Waifu` }, { quoted: fdoc })
             }
             break
             //Tambahan Anime
@@ -3504,17 +2984,7 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Random%20Anime/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                let buttons = [                   
-                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result },
-                    caption: `Random Anime ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Anime ${command}` }, { quoted: fdoc })
             }
             break
             //Random
@@ -3538,17 +3008,7 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Random%20Image/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                let buttons = [                   
-                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result },
-                    caption: `Random Image ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Image ${command}` }, { quoted: fdoc })
             }
             break
             //Wallpaper
@@ -3561,17 +3021,7 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Wallpaper/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                let buttons = [                   
-                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result },
-                    caption: `Random Wallpaper ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Wallpaper ${command}` }, { quoted: fdoc })
             }
             break
             //Meme
@@ -3582,23 +3032,7 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `${command}`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: { url: api('zahwa', '/randomimage/' + command, {}, 'apikey') },
-                    caption: `Random Image ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: { url: api('zahwa', '/randomimage/' + command, {}, 'apikey') }, caption: `Random Image ${command}` }, { quoted: fdoc })
             }
             break
             //Asupan
@@ -3616,17 +3050,7 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Cecan/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                let buttons = [                   
-                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result },
-                    caption: `Random Asupan ${command}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
+                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Asupan ${command}` }, { quoted: fdoc })
             }
             break
                 case 'couple': {
@@ -3658,25 +3082,7 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
-                    buttonId: `coffe`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: {
-                        url: 'https://coffee.alexflipnote.dev/random'
-                    },
-                    caption: `☕ Random Coffe`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: { url: 'https://coffee.alexflipnote.dev/random' }, caption: `☕ Random Coffe` }, { quoted: fdoc })
             }
             break
             case 'wallpaper': {
@@ -3689,25 +3095,7 @@ break
                 } = require('./lib/scraper')
                 anu = await wallpaper(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                let buttons = [{
-                    buttonId: `wallpaper ${text}`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: {
-                        url: result.image[0]
-                    },
-                    caption: `• Title : ${result.title}\n• Category : ${result.type}\n• Detail : ${result.source}\n• Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: { url: result.image[0] }, caption: `• Title : ${result.title}\n• Category : ${result.type}\n• Detail : ${result.source}\n• Media Url : ${result.image[2] || result.image[1] || result.image[0]}` }, { quoted: fdoc })
             }
             break
             case 'wikimedia': {
@@ -3720,25 +3108,7 @@ break
                 } = require('./lib/scraper')
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                let buttons = [{
-                    buttonId: `wikimedia ${text}`,
-                    buttonText: {
-                        displayText: '⌲ Next Image'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    image: {
-                        url: result.image
-                    },
-                    caption: `📄 Judul : ${result.title}\n📬 Sumber : ${result.source}\n🔗 Media Url : ${result.image}`,
-                    footer: ntiktok,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fdoc
-                })
+                conn.sendMessage(m.chat, { image: { url: result.image }, caption: `📄 Judul : ${result.title}\n📬 Sumber : ${result.source}\n🔗 Media Url : ${result.image}` }, { quoted: fdoc })
             }
             break
             case 'quotesanime':
@@ -3751,22 +3121,7 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
-                let buttons = [{
-                    buttonId: `quotesanime`,
-                    buttonText: {
-                        displayText: '⌲ Next Quotes'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
-                    footer: 'Quotes By AdrianTzy',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fakestatus
-                })
+                conn.sendMessage(m.chat, { text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}` }, { quoted: fakestatus })
             }
             break
             case 'animequotes':
@@ -3775,22 +3130,7 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/animequotes2', {}, 'apikey'))
-                let buttons = [{
-                    buttonId: `animequotes`,
-                    buttonText: {
-                        displayText: '⌲ Next Quotes'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    text: `~_${anu.result.quotes}_\n\nBy '${anu.result.character}', ${anu.result.anime}\n\n- ${anu.result.episode}`,
-                    footer: 'Quotes By AdrianTzy',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fgclink
-                })
+                conn.sendMessage(m.chat, { text: `~_${anu.result.quotes}_\n\nBy '${anu.result.character}', ${anu.result.anime}\n\n- ${anu.result.episode}` }, { quoted: fgclink })
             }
             break
             case 'motivasi':
@@ -3811,22 +3151,7 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/' + command, {}, 'apikey'))
-                let buttons = [{
-                    buttonId: `${command}`,
-                    buttonText: {
-                        displayText: '⌲ Next Quotes'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    text: anu.result.message,
-                    footer: 'Quotes By AdrianTzy',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fgclink
-                })
+                conn.sendMessage(m.chat, { text: anu.result.message }, { quoted: fgclink })
             }
             break
             case 'cerpen': {
@@ -3834,22 +3159,7 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/' + command, {}, 'apikey'))
-                let buttons = [{
-                    buttonId: `${command}`,
-                    buttonText: {
-                        displayText: '⌲ Next Quotes'
-                    },
-                    type: 1
-                }]
-                let buttonMessage = {
-                    text: `Judul : ${anu.result.Judul}\nPenulis : ${anu.result.Penulis}\n\n${anu.result.cerita}`,
-                    footer: 'Quotes By AdrianTzy',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                conn.sendMessage(m.chat, buttonMessage, {
-                    quoted: fgclink
-                })
+                conn.sendMessage(m.chat, { text: `Judul : ${anu.result.Judul}\nPenulis : ${anu.result.Penulis}\n\n${anu.result.cerita}` }, { quoted: fgclink })
             }
             break
             case '3dchristmas':
@@ -4255,16 +3565,14 @@ break
             var m3 = mon.split("|")[2]
                let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: 'Lokasimu', jpegThumbnail: thumb}}}
                let mq1 = m1 + '@s.whatsapp.net'
-               let kawk = ('PESAN RAHASIA')
+               let kawk = '*PESAN RAHASIA*'
                let ownernya = ownernomer + '@s.whatsapp.net'
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `👤Pesan Dari : ${m2} \n💞Untuk : @${mq1.split('@')[0]}\n💌Isi Pesan :\n${m3}`
-               let buttons1 = [{ buttonId: `menfesconfirm ${me}`, buttonText: { displayText: '⌲ Terima Menfess' }, type: 1 },{ buttonId: 'hehehe', buttonText: { displayText: '❤LIKE' }, type: 1 }]
-            await conn.sendButtonText(m1 + '@s.whatsapp.net', buttons1, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            await conn.sendMessage(m1 + '@s.whatsapp.net', { text: pjtxt + '\n\n' + kawk }, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
-            let buttons2 = [{ buttonId: 'hehehe', buttonText: { displayText: '❤LIKE' }, type: 1 }]
-            await conn.sendButtonText(m.chat, buttons2, akhji, ntiktok, m, {mentions: ments})
+            await conn.sendMessage(m.chat, { text: akhji }, m, {mentions: ments})
             }
             break
             case 'menfesconfirm': {
@@ -4312,34 +3620,14 @@ break
                 if (!text) return 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zahwa', '/api/downloader/twitter', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `twittermp3 ${text}`, buttonText: {displayText: '⌲ Audio'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.HD || anu.result.SD },
-                    caption: util.format(anu.result),
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
+                conn.sendMessage(m.chat, { video: { url: anu.result.HD || anu.result.SD }, caption: util.format(anu.result) }, { quoted: fgclink })
             }
             break
             case 'twittermp3': case 'twitteraudio': {
                 if (!text) return 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zahwa', '/api/downloader/twitter', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `twitter ${text}`, buttonText: {displayText: '⌲ Video'}, type: 1}
-                ]
-                let buttonMessage = {
-		            image: { url: anu.result.thumb },
-                    caption: util.format(anu.result),
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 4
-                }
-                let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
+                conn.sendMessage(m.chat, { image: { url: anu.result.thumb }, caption: util.format(anu.result) }, { quoted: fgclink })
                 conn.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: fvn })
             }
             break
@@ -4348,25 +3636,7 @@ break
                 let { umma } = require('./lib) scraper')
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
-		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '♫ Audio'}, type: 1},
-                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '⌲ Video'}, type: 1}
-                    ]
-		    let buttonMessage = {
-		        image: { url: anu.author.profilePic },
-			caption: `
-• Title : ${anu.title}
-• Author : ${anu.author.name}
-• Like : ${anu.like}
-• Caption : ${anu.caption}
-• Url : ${anu.media[0]}
-Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
-`,
-			footer: ntiktok,
-			buttons,
-			headerType: 4
-		    }
-		    conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
+		    conn.sendMessage(m.chat, { image: { url: anu.author.profilePic }, caption: `• Title : ${anu.title}\n• Author : ${anu.author.name}\n• Like : ${anu.like}\n• Caption : ${anu.caption}\n• Url : ${anu.media[0]}\n\nUntuk Download Media Silahkan Masukkan Command ytmp3/ytmp4 Dengan Url Diatas` }, { quoted: fgclink })
 		} else if (anu.type == 'image') {
 		    anu.media.map(async (url) => {
 		        conn.sendMessage(m.chat, { image: { url }, caption: `• Title : ${anu.title}\n• Author : ${anu.author.name}\n• Like : ${anu.like}\n• Caption : ${anu.caption}` }, { quoted: fgclink })
@@ -4658,47 +3928,34 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
             break
             case 'anonymous': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
-				let buttons = [
-                    { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
-                ]
-                conn.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await conn.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, ntiktok, m)
+                conn.sendMessage(m.chat, { text: { `\`\`\`Hi ${await conn.getName(m.sender)} Welcome To Anonymous Chat\n\nKetik ${command} Untuk Mencari Partner\`\`\``, { quoted: m })
             }
 			break
             case 'keluar': case 'leave': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 let room = Object.values(db.data.anonymous).find(room => room.check(m.sender))
                 if (!room) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner \`\`\``)
+                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner \`\`\`` }, { quoted: m })
                     return false
                 }
                 m.reply('Ok')
                 let other = room.other(m.sender)
                 if (other) await conn.sendText(other, `\`\`\`Partner Telah Meninggalkan Sesi Anonymous\`\`\``, m)
                 delete db.data.anonymous[room.id]
-                if (command === 'leave') break
             }
+            break
             case 'mulai': case 'start': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 if (Object.values(db.data.anonymous).find(room => room.check(m.sender))) {
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, ntiktok, m)
+                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\`` }, { quoted: m })
                     return false
                 }
                 let room = Object.values(db.data.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
+                    await conn.sendMessage(room.a, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await conn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
+                    await conn.sendMessage(room.b, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
                 } else {
                     let id = + new Date
                     db.data.anonymous[id] = {
@@ -4713,10 +3970,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, ntiktok, m)
+                    await conn.sendMessage(m.chat, { text: `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\`` }, { quoted: m })
                 }
                 break
             }
@@ -4724,10 +3978,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 let romeo = Object.values(db.data.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner\`\`\``)
+                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner\`\`\`` }, { quoted: m })
                     return false
                 }
                 let other = romeo.other(m.sender)
@@ -4735,14 +3986,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 delete db.data.anonymous[romeo.id]
                 let room = Object.values(db.data.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
+                    await conn.sendMessage(room.a, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await conn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
+                    await conn.sendMessage(room.b, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
                 } else {
                     let id = + new Date
                     db.data.anonymous[id] = {
@@ -4757,10 +4004,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
-                    ]
-                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, ntiktok, m)
+                    await conn.sendMessage(m.chat, { text: `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\`` }, { quoted: m })
                 }
                 break
             }
@@ -4782,23 +4026,8 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 break
             case 'nulis': {
                 if (!q) return m.reply(`Teks Nya Apa Kak?`)
-                let sections = [
-                {
-                title: "Nulis Buku >_<",
-                rows: [
-                {title: "⌲ 「 Nulis Kanan 」", rowId: `${prefix}nuliskanan ${q}`},
-                {title: "⌲ 「 Nulis Kiri 」", rowId: `${prefix}nuliskiri ${q}`}
-                ]
-                },
-                {
-                title: "Nulis Folio >_<",
-                rows: [
-                {title: "⌲ 「 Folio Kanan 」", rowId: `${prefix}foliokanan ${q}`},
-                {title: "⌲ 「 Folio Kiri 」", rowId: `${prefix}foliokiri ${q}`}
-                ]
-                }
-                ]
-                conn.sendListMsg(m.chat, `*Silahkan Pilih Menu Dibawah Ini*`, ntiktok, `NULIS MENU`, `Touch Me (⁠≧⁠▽⁠≦⁠)`, sections, floc)
+                let sections = `*Pilihan yang tersedia*\n\n• ${prefix}nuliskanan\n• ${prefix}nuliskiri\n\n*Kertas folio*\n\n• ${prefix}foliokanan\n• ${prefix}foliokiri\n\n_Pilih salah satu dari list diatas untuk melanjutkan_`
+                m.reply(sections)
               }
             break
             case 'nuliskiri': {
@@ -4942,10 +4171,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                let me = m.sender
                let pjtxt = `Pesan Dari : @${me.split('@')[0]} \nUntuk : @${ownernya.split('@')[0]}\n\n${command} ${text}`
                let ments = [ownernya, me]
-               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: '🙏THANKS' }, type: 1 }]
-            await conn.sendButtonText(ownernya, buttons, pjtxt, ntiktok, m, {mentions: ments, quoted: fdoc})
+            await conn.sendMessage(ownernya, { text: pjtxt }, { quoted: fdoc, mentions: ments })
             let akhji = `*Request Telah Terkirim*\n*Ke Owner @${ownernya.split('@')[0]}*\n_Terima Kasih🙏_`
-            await conn.sendButtonText(m.chat, buttons, akhji, ntiktok, m, {mentions: ments, quoted: fkontak})
+            await conn.sendMessage(m.chat, { text: akhji }, { quoted: fkontak, mentions: ments })
             }
             break
             case 'report': case 'lapor': {
@@ -4954,10 +4182,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                let me = m.sender
                let pjtxt = `Pesan Dari : @${me.split('@')[0]} \nUntuk : @${ownernya.split('@')[0]}\n\n${text}`
                let ments = [ownernya, me]
-               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: '🙏THANKS LAPORANNYA' }, type: 1 }]
-            await conn.sendButtonText(ownernya, buttons, pjtxt, ntiktok, m, {mentions: ments})
+            await conn.sendMessage(ownernya, { text: pjtxt }, { quoted: m, mentions: ments })
             let akhji = `Laporan Telah Terkirim\nKe Owner @${ownernya.split('@')[0]}\n*Terima Kasih Laporannya🙏*\n_Nomermu Akan Terblokir_\n_Jika Laporan Hanya Di Buat Buat_`
-            await conn.sendButtonText(m.chat, buttons, akhji, ntiktok, m, {mentions: ments})
+            await conn.sendMessage(m.chat, { text: akhji } , { quoted: m, mentions: ments })
             }
             break
             case 'hehehe': {
@@ -4971,7 +4198,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'ceklimit': case 'checklimit': case 'limit':{
-					m.reply('*Limit Lu :* ' + (db.data.users[m.sender].limit))
+					m.reply('*Sisa limit anda saat ini :* ' + (db.data.users[m.sender].limit))
 					}
 					break 
 		    case 'totalhit': case 'hit': {
@@ -5183,7 +4410,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             break
             case 'cekapi':
             case 'cekapikey': {
-                if (!text) return (`Contoh : ${prefix + command} AdrianTzy`)
+                if (!text) return (`Contoh : ${prefix + command} ClevvBotz`)
                 let anu = await fetchJson(api('zahwa', '/user/cekapi', { apikey: text }))
                 let caption = `Apikey Check :\n\n`
                 let i = anu.message
@@ -5368,8 +4595,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │3. Mengeksploitasi Terhadap bot.
 │Sanksi: BLOCK PERMANENT
 └──────────────┈❖`
-                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
-            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, m, {quoted: fkontak})
+                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
             }
             break
             case 'sewa':
@@ -5402,8 +4628,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │└─────────────┈❖
 │• Chat » Bukti Pembayaran » Bot Join
 └──────────────┈❖`
-                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
-            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, fkontak)
+                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
             }
             break
             case 'donasi':
@@ -5427,8 +4652,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │
 │ *Terima Kasih*
 └──────────────┈❖`
-                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
-            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, fkontak)
+                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
             }
             break
             case 'newfitur': {
@@ -5473,7 +4697,7 @@ ${prefix}soundmenu`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
-            case 'adrianmenu': {
+            case 'sanzzmenu': {
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             const more = String.fromCharCode(8206)
@@ -5505,7 +4729,7 @@ ${prefix}soundmenu`
  
  
  ${readmore}
- 「 ADRIAN MENU 」
+ 「 SANZZ MENU 」
 
 ${prefix}kenon
 ${prefix}verif@
@@ -5795,20 +5019,20 @@ ${prefix}toaudio [reply video]`
  「 DOWNLOADER 」
 
 ${prefix}tiktok [url]
-${prefix}tiktokmp3 [url]
-${prefix}instagram [url]
-${prefix}twitter [url]
-${prefix}twittermp3 [url]
-${prefix}facebook [url]
-${prefix}zippyshare [url]
-${prefix}mediafire [url]
-${prefix}ytmp3 [url]
-${prefix}ytmp4 [url]
-${prefix}getmusic [query]
-${prefix}getvideo [query]
-${prefix}umma [url]
-${prefix}joox [query]
-${prefix}soundcloud [url]`
+⊙ ${prefix}tiktokmp3 [url]
+⊙ ${prefix}instagram [url]
+⊙ ${prefix}twitter [url]
+⊙ ${prefix}twittermp3 [url]
+⊙ ${prefix}facebook [url]
+⊙ ${prefix}zippyshare [url]
+⊙ ${prefix}mediafire [url]
+⊙ ${prefix}ytmp3 [url]
+⊙ ${prefix}ytmp4 [url]
+⊙ ${prefix}getmusic [query]
+⊙ ${prefix}getvideo [query]
+⊙ ${prefix}umma [url]
+⊙ ${prefix}joox [query]
+⊙ ${prefix}soundcloud [url]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -5846,14 +5070,14 @@ ${prefix}soundcloud [url]`
  ${readmore}
  「 DATABASE 」
 
-${prefix}setcmd [reply sticker/pesan]
-${prefix}listcmd
-${prefix}delcmd [reply sticker/pesan]
-${prefix}lockcmd
-${prefix}addmsg
-${prefix}listmsg
-${prefix}getmsg
-${prefix}delmsg`
+⊙ ${prefix}setcmd [reply sticker/pesan]
+⊙ ${prefix}listcmd
+⊙ ${prefix}delcmd [reply sticker/pesan]
+⊙ ${prefix}lockcmd
+⊙ ${prefix}addmsg
+⊙ ${prefix}listmsg
+⊙ ${prefix}getmsg
+⊙ ${prefix}delmsg`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -5891,41 +5115,41 @@ ${prefix}delmsg`
  ${readmore}
  「 EPHOTO 」
 
-${prefix}logo2
-${prefix}logo3
-${prefix}logo4
-${prefix}logogaming
-${prefix}logogirl
-${prefix}logogold
-${prefix}spiderlogo
-${prefix}ffcover
-${prefix}crossfire
-${prefix}galaxy
-${prefix}glass
-${prefix}neon
-${prefix}beach
-${prefix}awan
-${prefix}flower
-${prefix}bohlam
-${prefix}kaligrafi
-${prefix}coklat
-${prefix}quotes
-${prefix}grafity
-${prefix}marmer
-${prefix}musimsemi
-${prefix}ruby
-${prefix}shadowtext
-${prefix}starlogo
-${prefix}starnight
-${prefix}starnight2
-${prefix}blackpink
-${prefix}cake
-${prefix}flashlight
-${prefix}puppycute
-${prefix}yasuologo
-${prefix}certificate
-${prefix}igcertificate
-${prefix}ytcertificate`
+⊙ ${prefix}logo2
+⊙ ${prefix}logo3
+⊙ ${prefix}logo4
+⊙ ${prefix}logogaming
+⊙ ${prefix}logogirl
+⊙ ${prefix}logogold
+⊙ ${prefix}spiderlogo
+⊙ ${prefix}ffcover
+⊙ ${prefix}crossfire
+⊙ ${prefix}galaxy
+⊙ ${prefix}glass
+⊙ ${prefix}neon
+⊙ ${prefix}beach
+⊙ ${prefix}awan
+⊙ ${prefix}flower
+⊙ ${prefix}bohlam
+⊙ ${prefix}kaligrafi
+⊙ ${prefix}coklat
+⊙ ${prefix}quotes
+⊙ ${prefix}grafity
+⊙ ${prefix}marmer
+⊙ ${prefix}musimsemi
+⊙ ${prefix}ruby
+⊙ ${prefix}shadowtext
+⊙ ${prefix}starlogo
+⊙ ${prefix}starnight
+⊙ ${prefix}starnight2
+⊙ ${prefix}blackpink
+⊙ ${prefix}cake
+⊙ ${prefix}flashlight
+⊙ ${prefix}puppycute
+⊙ ${prefix}yasuologo
+⊙ ${prefix}certificate
+⊙ ${prefix}igcertificate
+⊙ ${prefix}ytcertificate`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -5963,31 +5187,31 @@ ${prefix}ytcertificate`
  ${readmore}
  「 GROUP 」
 
-${prefix}linkgroup
-${prefix}revoke 
-${prefix}tagmenu [option]
-${prefix}ephemeral [option]
-${prefix}setppgrup full [image]
-${prefix}setname [text]
-${prefix}setdesc [text]
-${prefix}group [option]
-${prefix}editinfo [option]
-${prefix}add @user
-${prefix}kick @user
-${prefix}hidetag [text]
-${prefix}tagall [text]
-${prefix}totag [reply]
-${prefix}promote @user
-${prefix}demote @user
-${prefix}mute [on/off]
-${prefix}antilink [on/off]
-${prefix}antilinkyt [on/off]
-${prefix}antilinktt [on/off]
-${prefix}vote [text]
-${prefix}devote
-${prefix}upvote
-${prefix}cekvote
-${prefix}hapusvote`
+⊙ ${prefix}linkgroup
+⊙ ${prefix}revoke 
+⊙ ${prefix}tagmenu [option]
+⊙ ${prefix}ephemeral [option]
+⊙ ${prefix}setppgrup full [image]
+⊙ ${prefix}setname [text]
+⊙ ${prefix}setdesc [text]
+⊙ ${prefix}group [option]
+⊙ ${prefix}editinfo [option]
+⊙ ${prefix}add @user
+⊙ ${prefix}kick @user
+⊙ ${prefix}hidetag [text]
+⊙ ${prefix}tagall [text]
+⊙ ${prefix}totag [reply]
+⊙ ${prefix}promote @user
+⊙ ${prefix}demote @user
+⊙ ${prefix}mute [on/off]
+⊙ ${prefix}antilink [on/off]
+⊙ ${prefix}antilinkyt [on/off]
+⊙ ${prefix}antilinktt [on/off]
+⊙ ${prefix}vote [text]
+⊙ ${prefix}devote
+⊙ ${prefix}upvote
+⊙ ${prefix}cekvote
+⊙ ${prefix}hapusvote`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6025,12 +5249,12 @@ ${prefix}hapusvote`
  ${readmore}
  「 GAME 」
 
-${prefix}delttt
-${prefix}tictactoe
-${prefix}family100
-${prefix}tebakmenu [option]
-${prefix}math [mode]
-${prefix}suitpvp [@tag]`
+⊙ ${prefix}delttt
+⊙ ${prefix}tictactoe
+⊙ ${prefix}family100
+⊙ ${prefix}tebakmenu [option]
+⊙ ${prefix}math [mode]
+⊙ ${prefix}suitpvp [@tag]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6068,16 +5292,16 @@ ${prefix}suitpvp [@tag]`
  ${readmore}
  「 ISLAMIC 」
 
-${prefix}iqra
-${prefix}hadist
-${prefix}alquran
-${prefix}juzamma
-${prefix}kisahnabi
-${prefix}tafsirsurah
-${prefix}jadwalsholat
-${prefix}niatsholat
-${prefix}kisahmuslim
-${prefix}asmaulhusna`
+⊙ ${prefix}iqra
+⊙ ${prefix}hadist
+⊙ ${prefix}alquran
+⊙ ${prefix}juzamma
+⊙ ${prefix}kisahnabi
+⊙ ${prefix}tafsirsurah
+⊙ ${prefix}jadwalsholat
+⊙ ${prefix}niatsholat
+⊙ ${prefix}kisahmuslim
+⊙ ${prefix}asmaulhusna`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6115,25 +5339,25 @@ ${prefix}asmaulhusna`
  ${readmore}
  「 KERANG 」
 
-${prefix}apakah [teks]
-${prefix}bisakah [teks]
-${prefix}bagaimanakah [teks]
-${prefix}rate [teks]
-${prefix}kapankah [teks]
-${prefix}cekganteng [teks]
-${prefix}cekcantik [teks]
-${prefix}ceksange [teks]
-${prefix}cekgay [teks]
-${prefix}ceklesbi [teks]
-${prefix}cekmati [teks]
-${prefix}wangy [teks]
-${prefix}halah [teks]
-${prefix}hilih [teks]
-${prefix}huluh [teks]
-${prefix}heleh [teks]
-${prefix}holoh [teks]
-${prefix}jadian [teks]
-${prefix}jodohku [teks]`
+⊙ ${prefix}apakah [teks]
+⊙ ${prefix}bisakah [teks]
+⊙ ${prefix}bagaimanakah [teks]
+⊙ ${prefix}rate [teks]
+⊙ ${prefix}kapankah [teks]
+⊙ ${prefix}cekganteng [teks]
+⊙ ${prefix}cekcantik [teks]
+⊙ ${prefix}ceksange [teks]
+⊙ ${prefix}cekgay [teks]
+⊙ ${prefix}ceklesbi [teks]
+⊙ ${prefix}cekmati [teks]
+⊙ ${prefix}wangy [teks]
+⊙ ${prefix}halah [teks]
+⊙ ${prefix}hilih [teks]
+⊙ ${prefix}huluh [teks]
+⊙ ${prefix}heleh [teks]
+⊙ ${prefix}holoh [teks]
+⊙ ${prefix}jadian [teks]
+⊙ ${prefix}jodohku [teks]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6171,12 +5395,12 @@ ${prefix}jodohku [teks]`
  ${readmore}
  「 MEME 」
 
-${prefix}animememe
-${prefix}anjing
-${prefix}meme
-${prefix}memeindo
-${prefix}darkjoke
-${prefix}darkjokes
+⊙ ${prefix}animememe
+⊙ ${prefix}anjing
+⊙ ${prefix}meme
+⊙ ${prefix}memeindo
+⊙ ${prefix}darkjoke
+⊙ ${prefix}darkjokes
 ${prefix}onecak`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
@@ -6215,19 +5439,19 @@ ${prefix}onecak`
  ${readmore}
  「 MAIN 」
 
-${prefix}ping
-${prefix}owner
-${prefix}donasi
-${prefix}menu / ${prefix}help / ${prefix}?
-${prefix}delete / ${prefix}del / ${prefix}d
-${prefix}infochat
-${prefix}quoted
-${prefix}listpc
-${prefix}listgc
-${prefix}listonline
-${prefix}speedtest
-${prefix}request [req]
-${prefix}report [bug]`
+⊙ ${prefix}ping
+⊙ ${prefix}owner
+⊙ ${prefix}donasi
+⊙ ${prefix}menu / ${prefix}help / ${prefix}?
+⊙ ${prefix}delete / ${prefix}del / ${prefix}d
+⊙ ${prefix}infochat
+⊙ ${prefix}quoted
+⊙ ${prefix}listpc
+⊙ ${prefix}listgc
+⊙ ${prefix}listonline
+⊙ ${prefix}speedtest
+⊙ ${prefix}request [req]
+⊙ ${prefix}report [bug]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6265,26 +5489,26 @@ ${prefix}report [bug]`
  ${readmore}
  「 OWNER 」
 
-${prefix}setnamabot
-${prefix}setbiobot
-${prefix}react [emoji]
-${prefix}shutdown
-${prefix}sendsesi
-${prefix}myip
-${prefix}setexif
-${prefix}chat [option]
-${prefix}join [link]
-${prefix}leave
-${prefix}addprem @user
-${prefix}delprem @user
-${prefix}listprem
-${prefix}block @user
-${prefix}unblock @user
-${prefix}bcgroup [text]
-${prefix}bcall [text]
-${prefix}setppbot full [image]
-${prefix}setstatus
-${prefix}setnamebot`
+⊙ ${prefix}setnamabot
+⊙ ${prefix}setbiobot
+⊙ ${prefix}react [emoji]
+⊙ ${prefix}shutdown
+⊙ ${prefix}sendsesi
+⊙ ${prefix}myip
+⊙ ${prefix}setexif
+⊙ ${prefix}chat [option]
+⊙ ${prefix}join [link]
+⊙ ${prefix}leave
+⊙ ${prefix}addprem @user
+⊙ ${prefix}delprem @user
+⊙ ${prefix}listprem
+⊙ ${prefix}block @user
+⊙ ${prefix}unblock @user
+⊙ ${prefix}bcgroup [text]
+⊙ ${prefix}bcall [text]
+⊙ ${prefix}setppbot full [image]
+⊙ ${prefix}setstatus
+⊙ ${prefix}setnamebot`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             breakbreak
@@ -6322,36 +5546,36 @@ ${prefix}setnamebot`
  ${readmore}
  「 PRIMBON 」
 
-${prefix}nomorhoki
-${prefix}artimimpi
-${prefix}artinama
-${prefix}ramaljodoh
-${prefix}ramaljodohbali
-${prefix}suamiistri
-${prefix}ramalcinta
-${prefix}cocoknama
-${prefix}pasangan
-${prefix}jadiannikah
-${prefix}sifatusaha
-${prefix}rezeki
-${prefix}pekerjaan
-${prefix}nasib
-${prefix}penyakit
-${prefix}tarot
-${prefix}fengshui
-${prefix}haribaik
-${prefix}harisangar
-${prefix}harisial
-${prefix}nagahari
-${prefix}arahrezeki
-${prefix}peruntungan
-${prefix}weton
-${prefix}karakter
-${prefix}keberuntungan
-${prefix}memancing
-${prefix}masasubur
-${prefix}zodiak
-${prefix}shio`
+⊙ ${prefix}nomorhoki
+⊙ ${prefix}artimimpi
+⊙ ${prefix}artinama
+⊙ ${prefix}ramaljodoh
+⊙ ${prefix}ramaljodohbali
+⊙ ${prefix}suamiistri
+⊙ ${prefix}ramalcinta
+⊙ ${prefix}cocoknama
+⊙ ${prefix}pasangan
+⊙ ${prefix}jadiannikah
+⊙ ${prefix}sifatusaha
+⊙ ${prefix}rezeki
+⊙ ${prefix}pekerjaan
+⊙ ${prefix}nasib
+⊙ ${prefix}penyakit
+⊙ ${prefix}tarot
+⊙ ${prefix}fengshui
+⊙ ${prefix}haribaik
+⊙ ${prefix}harisangar
+⊙ ${prefix}harisial
+⊙ ${prefix}nagahari
+⊙ ${prefix}arahrezeki
+⊙ ${prefix}peruntungan
+⊙ ${prefix}weton
+⊙ ${prefix}karakter
+⊙ ${prefix}keberuntungan
+⊙ ${prefix}memancing
+⊙ ${prefix}masasubur
+⊙ ${prefix}zodiak
+⊙ ${prefix}shio`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6377,7 +5601,7 @@ ${prefix}shio`
  ❑ Name : ${global.namabot}
  ❑ Owner : ${global.namaowner}
  ❑ Prefix : ( ${prefix} )
- ❑ Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode 👤'}
+ ❑ Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode ??'}
  ❑ Platform : ${os.platform()}
  ❑ Runtime : ${runtime(process.uptime())}
  ❑ Language : Javascript
@@ -6389,24 +5613,24 @@ ${prefix}shio`
  ${readmore}
  「 PHOTO EDITOR 」
 
-${prefix}gay
-${prefix}contrast
-${prefix}pixelate
-${prefix}dither
-${prefix}sepia
-${prefix}brighten
-${prefix}greyscale
-${prefix}circle
-${prefix}blur
-${prefix}invert
-${prefix}scale
-${prefix}upscale
-${prefix}glass
-${prefix}wasted
-${prefix}passed
-${prefix}comrade
-${prefix}jail
-${prefix}triggered`
+⊙ ${prefix}gay
+⊙ ${prefix}contrast
+⊙ ${prefix}pixelate
+⊙ ${prefix}dither
+⊙ ${prefix}sepia
+⊙ ${prefix}brighten
+⊙ ${prefix}greyscale
+⊙ ${prefix}circle
+⊙ ${prefix}blur
+⊙ ${prefix}invert
+⊙ ${prefix}scale
+⊙ ${prefix}upscale
+⊙ ${prefix}glass
+⊙ ${prefix}wasted
+⊙ ${prefix}passed
+⊙ ${prefix}comrade
+⊙ ${prefix}jail
+⊙ ${prefix}triggered`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6444,23 +5668,23 @@ ${prefix}triggered`
  ${readmore}
  「 QUOTES 」
 
-${prefix}quotesanime
-${prefix}animequotes
-${prefix}motivasi
-${prefix}dilanquote
-${prefix}bucinquote
-${prefix}katasenja
-${prefix}randomquote
-${prefix}muslimquote
-${prefix}galauquote
-${prefix}kanyequote
-${prefix}trumpquote
-${prefix}trumpthink
-${prefix}creepyfact
-${prefix}faktaunik
-${prefix}puisi
-${prefix}pantun
-${prefix}cerpen`
+⊙ ${prefix}quotesanime
+⊙ ${prefix}animequotes
+⊙ ${prefix}motivasi
+⊙ ${prefix}dilanquote
+⊙ ${prefix}bucinquote
+⊙ ${prefix}katasenja
+⊙ ${prefix}randomquote
+⊙ ${prefix}muslimquote
+⊙ ${prefix}galauquote
+⊙ ${prefix}kanyequote
+⊙ ${prefix}trumpquote
+⊙ ${prefix}trumpthink
+⊙ ${prefix}creepyfact
+⊙ ${prefix}faktaunik
+⊙ ${prefix}puisi
+⊙ ${prefix}pantun
+⊙ ${prefix}cerpen`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6498,12 +5722,12 @@ ${prefix}cerpen`
  ${readmore}
  「 RANDOM 」
 
-${prefix}simih [teks]
-${prefix}apikey
-${prefix}coffe
-${prefix}ebinary [teks]
-${prefix}dbinary [teks]
-${prefix}styletext [teks]`
+⊙ ${prefix}simih [teks]
+⊙ ${prefix}apikey
+⊙ ${prefix}coffe
+⊙ ${prefix}ebinary [teks]
+⊙ ${prefix}dbinary [teks]
+⊙ ${prefix}styletext [teks]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6541,19 +5765,19 @@ ${prefix}styletext [teks]`
  ${readmore}
  「 STICKER 」
 
-${prefix}sticker
-${prefix}stickerwm
-${prefix}attp [teks]
-${prefix}ttp [teks]
-${prefix}mukalu
-${prefix}paimon
-${prefix}gura
-${prefix}doge
-${prefix}lovestick
-${prefix}animestick
-${prefix}patrick
-${prefix}emojimix 😎+🤠
-${prefix}emojimix2 😎`
+⊙ ${prefix}sticker
+⊙ ${prefix}stickerwm
+⊙ ${prefix}attp [teks]
+⊙ ${prefix}ttp [teks]
+⊙ ${prefix}mukalu
+⊙ ${prefix}paimon
+⊙ ${prefix}gura
+⊙ ${prefix}doge
+⊙ ${prefix}lovestick
+⊙ ${prefix}animestick
+⊙ ${prefix}patrick
+⊙ ${prefix}emojimix 😎+🤠
+⊙ ${prefix}emojimix2 😎`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6591,15 +5815,15 @@ ${prefix}emojimix2 😎`
  ${readmore}
  「 SEARCH 」
 
-${prefix}play [query]
-${prefix}yts [query]
-${prefix}google [query]
-${prefix}gimage [query]
-${prefix}pinterest [query]
-${prefix}wallpaper [query]
-${prefix}wikimedia [query]
-${prefix}ytsearch [query]
-${prefix}ringtone [query]`
+⊙ ${prefix}play [query]
+⊙ ${prefix}yts [query]
+⊙ ${prefix}google [query]
+⊙ ${prefix}gimage [query]
+⊙ ${prefix}pinterest [query]
+⊙ ${prefix}wallpaper [query]
+⊙ ${prefix}wikimedia [query]
+⊙ ${prefix}ytsearch [query]
+⊙ ${prefix}ringtone [query]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6637,10 +5861,10 @@ ${prefix}ringtone [query]`
  ${readmore}
  「 STALK 」
 
-${prefix}cekapi
-${prefix}githubstalk [username]
-${prefix}gitclone
-${prefix}stalk [option] [query]`
+⊙ ${prefix}cekapi
+⊙ ${prefix}githubstalk [username]
+⊙ ${prefix}gitclone
+⊙ ${prefix}stalk [option] [query]`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6678,37 +5902,37 @@ ${prefix}stalk [option] [query]`
  ${readmore}
  「 TEXT PRO 」
 
-${prefix}3dchristmas
-${prefix}3ddeepsea
-${prefix}americanflag
-${prefix}3dscifi
-${prefix}3drainbow
-${prefix}3dwaterpipe
-${prefix}halloweenskeleton
-${prefix}sketch
-${prefix}bluecircuit
-${prefix}space
-${prefix}metallic
-${prefix}fiction
-${prefix}greenhorror
-${prefix}transformer
-${prefix}berry
-${prefix}thunder
-${prefix}magma
-${prefix}3dcrackedstone
-${prefix}3dneonlight
-${prefix}impressiveglitch
-${prefix}naturalleaves
-${prefix}fireworksparkle
-${prefix}matrix
-${prefix}dropwater
-${prefix}harrypotter
-${prefix}foggywindow
-${prefix}neondevils
-${prefix}christmasholiday
-${prefix}3dgradient
-${prefix}blackpink
-${prefix}gluetext`
+⊙ ${prefix}3dchristmas
+⊙ ${prefix}3ddeepsea
+⊙ ${prefix}americanflag
+⊙ ${prefix}3dscifi
+⊙ ${prefix}3drainbow
+⊙ ${prefix}3dwaterpipe
+⊙ ${prefix}halloweenskeleton
+⊙ ${prefix}sketch
+⊙ ${prefix}bluecircuit
+⊙ ${prefix}space
+⊙ ${prefix}metallic
+⊙ ${prefix}fiction
+⊙ ${prefix}greenhorror
+⊙ ${prefix}transformer
+⊙ ${prefix}berry
+⊙ ${prefix}thunder
+⊙ ${prefix}magma
+⊙ ${prefix}3dcrackedstone
+⊙ ${prefix}3dneonlight
+⊙ ${prefix}impressiveglitch
+⊙ ${prefix}naturalleaves
+⊙ ${prefix}fireworksparkle
+⊙ ${prefix}matrix
+⊙ ${prefix}dropwater
+⊙ ${prefix}harrypotter
+⊙ ${prefix}foggywindow
+⊙ ${prefix}neondevils
+⊙ ${prefix}christmasholiday
+⊙ ${prefix}3dgradient
+⊙ ${prefix}blackpink
+⊙ ${prefix}gluetext`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6746,17 +5970,17 @@ ${prefix}gluetext`
  ${readmore}
  「 VOICE CHANGER 」
 
-${prefix}bass
-${prefix}blown
-${prefix}deep
-${prefix}earrape
-${prefix}fast
-${prefix}fat
-${prefix}nightcore
-${prefix}reverse
-${prefix}robot
-${prefix}slow
-${prefix}tupai`
+⊙ ${prefix}bass
+⊙ ${prefix}blown
+⊙ ${prefix}deep
+⊙ ${prefix}earrape
+⊙ ${prefix}fast
+⊙ ${prefix}fat
+⊙ ${prefix}nightcore
+⊙ ${prefix}reverse
+⊙ ${prefix}robot
+⊙ ${prefix}slow
+⊙ ${prefix}tupai`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6794,15 +6018,15 @@ ${prefix}tupai`
  ${readmore}
  「 WEBZONE 」
 
-${prefix}jadwaltv
-${prefix}playstore
-${prefix}gsmarena
-${prefix}jadwalbioskop
-${prefix}nowplayingbioskop
-${prefix}aminio
-${prefix}wattpad
-${prefix}webtoons
-${prefix}drakor`
+⊙ ${prefix}jadwaltv
+⊙ ${prefix}playstore
+⊙ ${prefix}gsmarena
+⊙ ${prefix}jadwalbioskop
+⊙ ${prefix}nowplayingbioskop
+⊙ ${prefix}aminio
+⊙ ${prefix}wattpad
+⊙ ${prefix}webtoons
+⊙ ${prefix}drakor`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6840,18 +6064,18 @@ ${prefix}drakor`
  ${readmore}
  「 WALLPAPER 」
 
-${prefix}cyberspace
-${prefix}mountain
-${prefix}programming
-${prefix}technology
-${prefix}aesthetic
-${prefix}boneka
-${prefix}hekel
-${prefix}kucing
-${prefix}mobil
-${prefix}motor
-${prefix}pubg
-${prefix}wallhp`
+⊙ ${prefix}cyberspace
+⊙ ${prefix}mountain
+⊙ ${prefix}programming
+⊙ ${prefix}technology
+⊙ ${prefix}aesthetic
+⊙ ${prefix}boneka
+⊙ ${prefix}hekel
+⊙ ${prefix}kucing
+⊙ ${prefix}mobil
+⊙ ${prefix}motor
+⊙ ${prefix}pubg
+⊙ ${prefix}wallhp`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6884,36 +6108,36 @@ ${prefix}wallhp`
 ${readmore}
 乂  *S u b - M e n u*
 
-  ☍ ${prefix}newfitur
-  ☍ ${prefix}adrianmenu
-  ☍ ${prefix}anonymenu
-  ☍ ${prefix}animemenu
-  ☍ ${prefix}convertmenu
-  ☍ ${prefix}asupanmenu
-  ☍ ${prefix}downmenu
-  ☍ ${prefix}datamenu
-  ☍ ${prefix}ephotomenu
-  ☍ ${prefix}grupmenu
-  ☍ ${prefix}islammenu
-  ☍ ${prefix}gamemenu
-  ☍ ${prefix}menusound
-  ☍ ${prefix}kerangmenu
-  ☍ ${prefix}mememenu
-  ☍ ${prefix}mainmenu
-  ☍ ${prefix}ownermenu
-  ☍ ${prefix}primbonmenu
-  ☍ ${prefix}photomenu
-  ☍ ${prefix}qoutesmenu
-  ☍ ${prefix}ramdommenu
-  ☍ ${prefix}stickermenu
-  ☍ ${prefix}searchmenu
-  ☍ ${prefix}stalkmenu
-  ☍ ${prefix}textmaker
-  ☍ ${prefix}voicemenu
-  ☍ ${prefix}webmenu
-  ☍ ${prefix}wallpapermenu
-  ☍ ${prefix}allmenu
-  ☍ ${prefix}tqto`
+  ☍ ⊙ ${prefix}newfitur
+  ☍ ⊙ ${prefix}sanzzmenu
+  ☍ ⊙ ${prefix}anonymenu
+  ☍ ⊙ ${prefix}animemenu
+  ☍ ⊙ ${prefix}convertmenu
+  ☍ ⊙ ${prefix}asupanmenu
+  ☍ ⊙ ${prefix}downmenu
+  ☍ ⊙ ${prefix}datamenu
+  ☍ ⊙ ${prefix}ephotomenu
+  ☍ ⊙ ${prefix}grupmenu
+  ☍ ⊙ ${prefix}islammenu
+  ☍ ⊙ ${prefix}gamemenu
+  ☍ ⊙ ${prefix}menusound
+  ☍ ⊙ ${prefix}kerangmenu
+  ☍ ⊙ ${prefix}mememenu
+  ☍ ⊙ ${prefix}mainmenu
+  ☍ ⊙ ${prefix}ownermenu
+  ☍ ⊙ ${prefix}primbonmenu
+  ☍ ⊙ ${prefix}photomenu
+  ☍ ⊙ ${prefix}qoutesmenu
+  ☍ ⊙ ${prefix}ramdommenu
+  ☍ ⊙ ${prefix}stickermenu
+  ☍ ⊙ ${prefix}searchmenu
+  ☍ ⊙ ${prefix}stalkmenu
+  ☍ ⊙ ${prefix}textmaker
+  ☍ ⊙ ${prefix}voicemenu
+  ☍ ⊙ ${prefix}webmenu
+  ☍ ⊙ ${prefix}wallpapermenu
+  ☍ ⊙ ${prefix}allmenu
+  ☍ ⊙ ${prefix}tqto`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -6951,511 +6175,511 @@ ${readmore}
  ${readmore}
 「 NEW FITUR 」
 
-${prefix}qc
-${prefix}totalfitur
-${prefix}remini
-${prefix}tohd
-${prefix}soundmenu
+⊙ ${prefix}qc
+⊙ ${prefix}totalfitur
+⊙ ${prefix}remini
+⊙ ${prefix}tohd
+⊙ ${prefix}soundmenu
 
-「 ADRIAN MENU 」
+「 SANZZ MENU 」
 
-${prefix}kenon
-${prefix}verif@
-${prefix}sendbug1
-${prefix}sendbug2
-${prefix}sendbug3
+⊙ ${prefix}kenon
+⊙ ${prefix}verif@
+⊙ ${prefix}sendbug1
+⊙ ${prefix}sendbug2
+⊙ ${prefix}sendbug3
 
 「 ANONYMOUS CHAT 」
 
-${prefix}menfess
-${prefix}anonymous
-${prefix}start
-${prefix}next
-${prefix}keluar
+⊙ ${prefix}menfess
+⊙ ${prefix}anonymous
+⊙ ${prefix}start
+⊙ ${prefix}next
+⊙ ${prefix}keluar
 
 「 ANIME 」
 
-${prefix}hololive
-${prefix}couples
-${prefix}couple
-${prefix}waifu
-${prefix}husbu
-${prefix}neko
-${prefix}uniform
-${prefix}cosplay
-${prefix}maid
-${prefix}oppai
-${prefix}selfies
-${prefix}shinobu
-${prefix}akira
-${prefix}akiyama
-${prefix}ana
-${prefix}asuna
-${prefix}ayuzawa
-${prefix}boruto
-${prefix}chitoge
-${prefix}deidara
-${prefix}doraemon
-${prefix}elaina
-${prefix}emilia
-${prefix}erza
-${prefix}gremory
-${prefix}hestia
-${prefix}hinata
-${prefix}inori
-${prefix}isuzu
-${prefix}itachi
-${prefix}itori
-${prefix}kaga
-${prefix}kagura
-${prefix}kakasih
-${prefix}kaori
-${prefix}keneki
-${prefix}kotori
-${prefix}kurumi
-${prefix}loli
-${prefix}madara
-${prefix}mikasa
-${prefix}miku
-${prefix}minato
-${prefix}naruto
-${prefix}nezuko
-${prefix}onepiece
-${prefix}pokemon
-${prefix}rize
-${prefix}sagiri
-${prefix}sakura
-${prefix}shinka
-${prefix}shizuka
-${prefix}shouta
-${prefix}toukachan
-${prefix}tsunade
-${prefix}yuki
-${prefix}raiden
-${prefix}hutao
-${prefix}xiao
-${prefix}chongyun
-${prefix}baal
-${prefix}keqing
-${prefix}yae
-${prefix}zhongli
-${prefix}ningguang
-${prefix}shenhe
-${prefix}ayaka
-${prefix}calliope
-${prefix}kitagawa
+⊙ ${prefix}hololive
+⊙ ${prefix}couples
+⊙ ${prefix}couple
+⊙ ${prefix}waifu
+⊙ ${prefix}husbu
+⊙ ${prefix}neko
+⊙ ${prefix}uniform
+⊙ ${prefix}cosplay
+⊙ ${prefix}maid
+⊙ ${prefix}oppai
+⊙ ${prefix}selfies
+⊙ ${prefix}shinobu
+⊙ ${prefix}akira
+⊙ ${prefix}akiyama
+⊙ ${prefix}ana
+⊙ ${prefix}asuna
+⊙ ${prefix}ayuzawa
+⊙ ${prefix}boruto
+⊙ ${prefix}chitoge
+⊙ ${prefix}deidara
+⊙ ${prefix}doraemon
+⊙ ${prefix}elaina
+⊙ ${prefix}emilia
+⊙ ${prefix}erza
+⊙ ${prefix}gremory
+⊙ ${prefix}hestia
+⊙ ${prefix}hinata
+⊙ ${prefix}inori
+⊙ ${prefix}isuzu
+⊙ ${prefix}itachi
+⊙ ${prefix}itori
+⊙ ${prefix}kaga
+⊙ ${prefix}kagura
+⊙ ${prefix}kakasih
+⊙ ${prefix}kaori
+⊙ ${prefix}keneki
+⊙ ${prefix}kotori
+⊙ ${prefix}kurumi
+⊙ ${prefix}loli
+⊙ ${prefix}madara
+⊙ ${prefix}mikasa
+⊙ ${prefix}miku
+⊙ ${prefix}minato
+⊙ ${prefix}naruto
+⊙ ${prefix}nezuko
+⊙ ${prefix}onepiece
+⊙ ${prefix}pokemon
+⊙ ${prefix}rize
+⊙ ${prefix}sagiri
+⊙ ${prefix}sakura
+⊙ ${prefix}shinka
+⊙ ${prefix}shizuka
+⊙ ${prefix}shouta
+⊙ ${prefix}toukachan
+⊙ ${prefix}tsunade
+⊙ ${prefix}yuki
+⊙ ${prefix}raiden
+⊙ ${prefix}hutao
+⊙ ${prefix}xiao
+⊙ ${prefix}chongyun
+⊙ ${prefix}baal
+⊙ ${prefix}keqing
+⊙ ${prefix}yae
+⊙ ${prefix}zhongli
+⊙ ${prefix}ningguang
+⊙ ${prefix}shenhe
+⊙ ${prefix}ayaka
+⊙ ${prefix}calliope
+⊙ ${prefix}kitagawa
 
 「 ASUPAN 」
 
-${prefix}cecan
-${prefix}cogan
-${prefix}china
-${prefix}japan
-${prefix}korea
-${prefix}indonesia
-${prefix}malaysia
-${prefix}thailand
-${prefix}vietnam
-${prefix}blankpink
-${prefix}justina
-${prefix}kpop
-${prefix}rose
-${prefix}ryujin
+⊙ ${prefix}cecan
+⊙ ${prefix}cogan
+⊙ ${prefix}china
+⊙ ${prefix}japan
+⊙ ${prefix}korea
+⊙ ${prefix}indonesia
+⊙ ${prefix}malaysia
+⊙ ${prefix}thailand
+⊙ ${prefix}vietnam
+⊙ ${prefix}blankpink
+⊙ ${prefix}justina
+⊙ ${prefix}kpop
+⊙ ${prefix}rose
+⊙ ${prefix}ryujin
 
 「 CONVERT 」
 
-${prefix}nulis
-${prefix}removebg [image]
-${prefix}toimage [reply sticker]
-${prefix}tovideo [reply sticker]
-${prefix}togif [reply sticker]
-${prefix}tourl [image / video]
-${prefix}tovn [reply video]
-${prefix}tomp3 [reply video]
-${prefix}remini [reply foto]
-${prefix}toaudio [reply video]
+⊙ ${prefix}nulis
+⊙ ${prefix}removebg [image]
+⊙ ${prefix}toimage [reply sticker]
+⊙ ${prefix}tovideo [reply sticker]
+⊙ ${prefix}togif [reply sticker]
+⊙ ${prefix}tourl [image / video]
+⊙ ${prefix}tovn [reply video]
+⊙ ${prefix}tomp3 [reply video]
+⊙ ${prefix}remini [reply foto]
+⊙ ${prefix}toaudio [reply video]
 
 「 DOWNLOADER 」
 
-${prefix}tiktoknowm [url]
-${prefix}tiktokwm [url]
-${prefix}tiktokmp3 [url]
-${prefix}instagram [url]
-${prefix}twitter [url]
-${prefix}twittermp3 [url]
-${prefix}facebook [url]
-${prefix}zippyshare [url]
-${prefix}mediafire [url]
-${prefix}ytmp3 [url]
-${prefix}ytmp4 [url]
-${prefix}getmusic [query]
-${prefix}getvideo [query]
-${prefix}umma [url]
-${prefix}joox [query]
-${prefix}soundcloud [url]
+⊙ ${prefix}tiktoknowm [url]
+⊙ ${prefix}tiktokwm [url]
+⊙ ${prefix}tiktokmp3 [url]
+⊙ ${prefix}instagram [url]
+⊙ ${prefix}twitter [url]
+⊙ ${prefix}twittermp3 [url]
+⊙ ${prefix}facebook [url]
+⊙ ${prefix}zippyshare [url]
+⊙ ${prefix}mediafire [url]
+⊙ ${prefix}ytmp3 [url]
+⊙ ${prefix}ytmp4 [url]
+⊙ ${prefix}getmusic [query]
+⊙ ${prefix}getvideo [query]
+⊙ ${prefix}umma [url]
+⊙ ${prefix}joox [query]
+⊙ ${prefix}soundcloud [url]
 
 「 DATABASE 」
 
-${prefix}setcmd [reply sticker/pesan]
-${prefix}listcmd
-${prefix}delcmd [reply sticker/pesan]
-${prefix}lockcmd
-${prefix}addmsg
-${prefix}listmsg
-${prefix}getmsg
-${prefix}delmsg
+⊙ ${prefix}setcmd [reply sticker/pesan]
+⊙ ${prefix}listcmd
+⊙ ${prefix}delcmd [reply sticker/pesan]
+⊙ ${prefix}lockcmd
+⊙ ${prefix}addmsg
+⊙ ${prefix}listmsg
+⊙ ${prefix}getmsg
+⊙ ${prefix}delmsg
 
 「 EPHOTO 」
 
-${prefix}logo2
-${prefix}logo3
-${prefix}logo4
-${prefix}logogaming
-${prefix}logogirl
-${prefix}logogold
-${prefix}spiderlogo
-${prefix}ffcover
-${prefix}crossfire
-${prefix}galaxy
-${prefix}glass
-${prefix}neon
-${prefix}beach
-${prefix}awan
-${prefix}flower
-${prefix}bohlam
-${prefix}kaligrafi
-${prefix}coklat
-${prefix}quotes
-${prefix}grafity
-${prefix}marmer
-${prefix}musimsemi
-${prefix}ruby
-${prefix}shadowtext
-${prefix}starlogo
-${prefix}starnight
-${prefix}starnight2
-${prefix}blackpink
-${prefix}cake
-${prefix}flashlight
-${prefix}puppycute
-${prefix}yasuologo
-${prefix}certificate
-${prefix}igcertificate
-${prefix}ytcertificate
+⊙ ${prefix}logo2
+⊙ ${prefix}logo3
+⊙ ${prefix}logo4
+⊙ ${prefix}logogaming
+⊙ ${prefix}logogirl
+⊙ ${prefix}logogold
+⊙ ${prefix}spiderlogo
+⊙ ${prefix}ffcover
+⊙ ${prefix}crossfire
+⊙ ${prefix}galaxy
+⊙ ${prefix}glass
+⊙ ${prefix}neon
+⊙ ${prefix}beach
+⊙ ${prefix}awan
+⊙ ${prefix}flower
+⊙ ${prefix}bohlam
+⊙ ${prefix}kaligrafi
+⊙ ${prefix}coklat
+⊙ ${prefix}quotes
+⊙ ${prefix}grafity
+⊙ ${prefix}marmer
+⊙ ${prefix}musimsemi
+⊙ ${prefix}ruby
+⊙ ${prefix}shadowtext
+⊙ ${prefix}starlogo
+⊙ ${prefix}starnight
+⊙ ${prefix}starnight2
+⊙ ${prefix}blackpink
+⊙ ${prefix}cake
+⊙ ${prefix}flashlight
+⊙ ${prefix}puppycute
+⊙ ${prefix}yasuologo
+⊙ ${prefix}certificate
+⊙ ${prefix}igcertificate
+⊙ ${prefix}ytcertificate
 
 「 GROUP 」
 
-${prefix}linkgroup
-${prefix}revoke 
-${prefix}tagmenu [option]
-${prefix}ephemeral [option]
-${prefix}setppgrup full [image]
-${prefix}setname [text]
-${prefix}setdesc [text]
-${prefix}group [option]
-${prefix}editinfo [option]
-${prefix}add @user
-${prefix}kick @user
-${prefix}hidetag [text]
-${prefix}tagall [text]
-${prefix}totag [reply]
-${prefix}promote @user
-${prefix}demote @user
-${prefix}mute [on/off]
-${prefix}antilink [on/off]
-${prefix}antilinkyt [on/off]
-${prefix}antilinktt [on/off]
-${prefix}vote [text]
-${prefix}devote
-${prefix}upvote
-${prefix}cekvote
-${prefix}hapusvote
+⊙ ${prefix}linkgroup
+⊙ ${prefix}revoke 
+⊙ ${prefix}tagmenu [option]
+⊙ ${prefix}ephemeral [option]
+⊙ ${prefix}setppgrup full [image]
+⊙ ${prefix}setname [text]
+⊙ ${prefix}setdesc [text]
+⊙ ${prefix}group [option]
+⊙ ${prefix}editinfo [option]
+⊙ ${prefix}add @user
+⊙ ${prefix}kick @user
+⊙ ${prefix}hidetag [text]
+⊙ ${prefix}tagall [text]
+⊙ ${prefix}totag [reply]
+⊙ ${prefix}promote @user
+⊙ ${prefix}demote @user
+⊙ ${prefix}mute [on/off]
+⊙ ${prefix}antilink [on/off]
+⊙ ${prefix}antilinkyt [on/off]
+⊙ ${prefix}antilinktt [on/off]
+⊙ ${prefix}vote [text]
+⊙ ${prefix}devote
+⊙ ${prefix}upvote
+⊙ ${prefix}cekvote
+⊙ ${prefix}hapusvote
 
 「 GAME 」
 
-${prefix}delttt
-${prefix}tictactoe
-${prefix}family100
-${prefix}tebakmenu [option]
-${prefix}math [mode]
-${prefix}suitpvp [@tag]
+⊙ ${prefix}delttt
+⊙ ${prefix}tictactoe
+⊙ ${prefix}family100
+⊙ ${prefix}tebakmenu [option]
+⊙ ${prefix}math [mode]
+⊙ ${prefix}suitpvp [@tag]
 
 「 ISLAMIC 」
 
-${prefix}iqra
-${prefix}hadist
-${prefix}alquran
-${prefix}juzamma
-${prefix}kisahnabi
-${prefix}tafsirsurah
-${prefix}jadwalsholat
-${prefix}niatsholat
-${prefix}kisahmuslim
-${prefix}asmaulhusna
+⊙ ${prefix}iqra
+⊙ ${prefix}hadist
+⊙ ${prefix}alquran
+⊙ ${prefix}juzamma
+⊙ ${prefix}kisahnabi
+⊙ ${prefix}tafsirsurah
+⊙ ${prefix}jadwalsholat
+⊙ ${prefix}niatsholat
+⊙ ${prefix}kisahmuslim
+⊙ ${prefix}asmaulhusna
 
 「 KERANG 」
 
-${prefix}apakah [teks]
-${prefix}bisakah [teks]
-${prefix}bagaimanakah [teks]
-${prefix}rate [teks]
-${prefix}kapankah [teks]
-${prefix}cekganteng [teks]
-${prefix}cekcantik [teks]
-${prefix}ceksange [teks]
-${prefix}cekgay [teks]
-${prefix}ceklesbi [teks]
-${prefix}cekmati [teks]
-${prefix}wangy [teks]
-${prefix}halah [teks]
-${prefix}hilih [teks]
-${prefix}huluh [teks]
-${prefix}heleh [teks]
-${prefix}holoh [teks]
-${prefix}jadian [teks]
-${prefix}jodohku [teks]
+⊙ ${prefix}apakah [teks]
+⊙ ${prefix}bisakah [teks]
+⊙ ${prefix}bagaimanakah [teks]
+⊙ ${prefix}rate [teks]
+⊙ ${prefix}kapankah [teks]
+⊙ ${prefix}cekganteng [teks]
+⊙ ${prefix}cekcantik [teks]
+⊙ ${prefix}ceksange [teks]
+⊙ ${prefix}cekgay [teks]
+⊙ ${prefix}ceklesbi [teks]
+⊙ ${prefix}cekmati [teks]
+⊙ ${prefix}wangy [teks]
+⊙ ${prefix}halah [teks]
+⊙ ${prefix}hilih [teks]
+⊙ ${prefix}huluh [teks]
+⊙ ${prefix}heleh [teks]
+⊙ ${prefix}holoh [teks]
+⊙ ${prefix}jadian [teks]
+⊙ ${prefix}jodohku [teks]
 
 「 MEME 」
 
-${prefix}animememe
-${prefix}anjing
-${prefix}meme
-${prefix}memeindo
-${prefix}darkjoke
-${prefix}darkjokes
-${prefix}onecak
+⊙ ${prefix}animememe
+⊙ ${prefix}anjing
+⊙ ${prefix}meme
+⊙ ${prefix}memeindo
+⊙ ${prefix}darkjoke
+⊙ ${prefix}darkjokes
+⊙ ${prefix}onecak
 
 「 MAIN 」
 
-${prefix}ping
-${prefix}owner
-${prefix}donasi
-${prefix}menu / ${prefix}help / ${prefix}?
-${prefix}delete / ${prefix}del / ${prefix}d
-${prefix}infochat
-${prefix}quoted
-${prefix}listpc
-${prefix}listgc
-${prefix}listonline
-${prefix}speedtest
-${prefix}request [req]
-${prefix}report [bug]
+⊙ ${prefix}ping
+⊙ ${prefix}owner
+⊙ ${prefix}donasi
+⊙ ${prefix}menu / ${prefix}help / ${prefix}?
+⊙ ${prefix}delete / ${prefix}del / ${prefix}d
+⊙ ${prefix}infochat
+⊙ ${prefix}quoted
+⊙ ${prefix}listpc
+⊙ ${prefix}listgc
+⊙ ${prefix}listonline
+⊙ ${prefix}speedtest
+⊙ ${prefix}request [req]
+⊙ ${prefix}report [bug]
 
 「 OWNER 」
 
-${prefix}setnamabot
-${prefix}setbiobot
-${prefix}react [emoji]
-${prefix}shutdown
-${prefix}sendsesi
-${prefix}myip
-${prefix}setexif
-${prefix}chat [option]
-${prefix}join [link]
-${prefix}leave
-${prefix}addprem @user
-${prefix}delprem @user
-${prefix}listprem
-${prefix}block @user
-${prefix}unblock @user
-${prefix}bcgroup [text]
-${prefix}bcall [text]
-${prefix}setppbot full [image]
-${prefix}setstatus
-${prefix}setnamebot
+⊙ ${prefix}setnamabot
+⊙ ${prefix}setbiobot
+⊙ ${prefix}react [emoji]
+⊙ ${prefix}shutdown
+⊙ ${prefix}sendsesi
+⊙ ${prefix}myip
+⊙ ${prefix}setexif
+⊙ ${prefix}chat [option]
+⊙ ${prefix}join [link]
+⊙ ${prefix}leave
+⊙ ${prefix}addprem @user
+⊙ ${prefix}delprem @user
+⊙ ${prefix}listprem
+⊙ ${prefix}block @user
+⊙ ${prefix}unblock @user
+⊙ ${prefix}bcgroup [text]
+⊙ ${prefix}bcall [text]
+⊙ ${prefix}setppbot full [image]
+⊙ ${prefix}setstatus
+⊙ ${prefix}setnamebot
 
 「 PRIMBON 」
 
-${prefix}nomorhoki
-${prefix}artimimpi
-${prefix}artinama
-${prefix}ramaljodoh
-${prefix}ramaljodohbali
-${prefix}suamiistri
-${prefix}ramalcinta
-${prefix}cocoknama
-${prefix}pasangan
-${prefix}jadiannikah
-${prefix}sifatusaha
-${prefix}rezeki
-${prefix}pekerjaan
-${prefix}nasib
-${prefix}penyakit
-${prefix}tarot
-${prefix}fengshui
-${prefix}haribaik
-${prefix}harisangar
-${prefix}harisial
-${prefix}nagahari
-${prefix}arahrezeki
-${prefix}peruntungan
-${prefix}weton
-${prefix}karakter
-${prefix}keberuntungan
-${prefix}memancing
-${prefix}masasubur
-${prefix}zodiak
-${prefix}shio
+⊙ ${prefix}nomorhoki
+⊙ ${prefix}artimimpi
+⊙ ${prefix}artinama
+⊙ ${prefix}ramaljodoh
+⊙ ${prefix}ramaljodohbali
+⊙ ${prefix}suamiistri
+⊙ ${prefix}ramalcinta
+⊙ ${prefix}cocoknama
+⊙ ${prefix}pasangan
+⊙ ${prefix}jadiannikah
+⊙ ${prefix}sifatusaha
+⊙ ${prefix}rezeki
+⊙ ${prefix}pekerjaan
+⊙ ${prefix}nasib
+⊙ ${prefix}penyakit
+⊙ ${prefix}tarot
+⊙ ${prefix}fengshui
+⊙ ${prefix}haribaik
+⊙ ${prefix}harisangar
+⊙ ${prefix}harisial
+⊙ ${prefix}nagahari
+⊙ ${prefix}arahrezeki
+⊙ ${prefix}peruntungan
+⊙ ${prefix}weton
+⊙ ${prefix}karakter
+⊙ ${prefix}keberuntungan
+⊙ ${prefix}memancing
+⊙ ${prefix}masasubur
+⊙ ${prefix}zodiak
+⊙ ${prefix}shio
 
 「 PHOTO EDITOR 」
 
-${prefix}gay
-${prefix}contrast
-${prefix}pixelate
-${prefix}dither
-${prefix}sepia
-${prefix}brighten
-${prefix}greyscale
-${prefix}circle
-${prefix}blur
-${prefix}invert
-${prefix}scale
-${prefix}upscale
-${prefix}glass
-${prefix}wasted
-${prefix}passed
-${prefix}comrade
-${prefix}jail
-${prefix}triggered
+⊙ ${prefix}gay
+⊙ ${prefix}contrast
+⊙ ${prefix}pixelate
+⊙ ${prefix}dither
+⊙ ${prefix}sepia
+⊙ ${prefix}brighten
+⊙ ${prefix}greyscale
+⊙ ${prefix}circle
+⊙ ${prefix}blur
+⊙ ${prefix}invert
+⊙ ${prefix}scale
+⊙ ${prefix}upscale
+⊙ ${prefix}glass
+⊙ ${prefix}wasted
+⊙ ${prefix}passed
+⊙ ${prefix}comrade
+⊙ ${prefix}jail
+⊙ ${prefix}triggered
 
 「 QUOTES 」
 
-${prefix}quotesanime
-${prefix}animequotes
-${prefix}motivasi
-${prefix}dilanquote
-${prefix}bucinquote
-${prefix}katasenja
-${prefix}randomquote
-${prefix}muslimquote
-${prefix}galauquote
-${prefix}kanyequote
-${prefix}trumpquote
-${prefix}trumpthink
-${prefix}creepyfact
-${prefix}faktaunik
-${prefix}puisi
-${prefix}pantun
-${prefix}cerpen
+⊙ ${prefix}quotesanime
+⊙ ${prefix}animequotes
+⊙ ${prefix}motivasi
+⊙ ${prefix}dilanquote
+⊙ ${prefix}bucinquote
+⊙ ${prefix}katasenja
+⊙ ${prefix}randomquote
+⊙ ${prefix}muslimquote
+⊙ ${prefix}galauquote
+⊙ ${prefix}kanyequote
+⊙ ${prefix}trumpquote
+⊙ ${prefix}trumpthink
+⊙ ${prefix}creepyfact
+⊙ ${prefix}faktaunik
+⊙ ${prefix}puisi
+⊙ ${prefix}pantun
+⊙ ${prefix}cerpen
 
 「 RANDOM 」
 
-${prefix}simih [teks]
-${prefix}apikey
-${prefix}coffe
-${prefix}ebinary [teks]
-${prefix}dbinary [teks]
-${prefix}styletext [teks]
+⊙ ${prefix}simih [teks]
+⊙ ${prefix}apikey
+⊙ ${prefix}coffe
+⊙ ${prefix}ebinary [teks]
+⊙ ${prefix}dbinary [teks]
+⊙ ${prefix}styletext [teks]
 
 「 STICKER 」
 
-${prefix}sticker
-${prefix}stickerwm
-${prefix}attp [teks]
-${prefix}ttp [teks]
-${prefix}mukalu
-${prefix}paimon
-${prefix}gura
-${prefix}doge
-${prefix}lovestick
-${prefix}animestick
-${prefix}patrick
-${prefix}emojimix 😎+🤠
-${prefix}emojimix2 😎
+⊙ ${prefix}sticker
+⊙ ${prefix}stickerwm
+⊙ ${prefix}attp [teks]
+⊙ ${prefix}ttp [teks]
+⊙ ${prefix}mukalu
+⊙ ${prefix}paimon
+⊙ ${prefix}gura
+⊙ ${prefix}doge
+⊙ ${prefix}lovestick
+⊙ ${prefix}animestick
+⊙ ${prefix}patrick
+⊙ ${prefix}emojimix 😎+🤠
+⊙ ${prefix}emojimix2 😎
 
 「 SEARCH 」
 
-${prefix}play [query]
-${prefix}yts [query]
-${prefix}google [query]
-${prefix}gimage [query]
-${prefix}pinterest [query]
-${prefix}wallpaper [query]
-${prefix}wikimedia [query]
-${prefix}ytsearch [query]
-${prefix}ringtone [query]
+⊙ ${prefix}play [query]
+⊙ ${prefix}yts [query]
+⊙ ${prefix}google [query]
+⊙ ${prefix}gimage [query]
+⊙ ${prefix}pinterest [query]
+⊙ ${prefix}wallpaper [query]
+⊙ ${prefix}wikimedia [query]
+⊙ ${prefix}ytsearch [query]
+⊙ ${prefix}ringtone [query]
 
 「 STALK 」
 
-${prefix}cekapi
-${prefix}githubstalk [username]
-${prefix}gitclone
-${prefix}stalk [option] [query]
+⊙ ${prefix}cekapi
+⊙ ${prefix}githubstalk [username]
+⊙ ${prefix}gitclone
+⊙ ${prefix}stalk [option] [query]
 
 「 TEXT PRO 」
 
-${prefix}3dchristmas
-${prefix}3ddeepsea
-${prefix}americanflag
-${prefix}3dscifi
-${prefix}3drainbow
-${prefix}3dwaterpipe
-${prefix}halloweenskeleton
-${prefix}sketch
-${prefix}bluecircuit
-${prefix}space
-${prefix}metallic
-${prefix}fiction
-${prefix}greenhorror
-${prefix}transformer
-${prefix}berry
-${prefix}thunder
-${prefix}magma
-${prefix}3dcrackedstone
-${prefix}3dneonlight
-${prefix}impressiveglitch
-${prefix}naturalleaves
-${prefix}fireworksparkle
-${prefix}matrix
-${prefix}dropwater
-${prefix}harrypotter
-${prefix}foggywindow
-${prefix}neondevils
-${prefix}christmasholiday
-${prefix}3dgradient
-${prefix}blackpink
-${prefix}gluetext
+⊙ ${prefix}3dchristmas
+⊙ ${prefix}3ddeepsea
+⊙ ${prefix}americanflag
+⊙ ${prefix}3dscifi
+⊙ ${prefix}3drainbow
+⊙ ${prefix}3dwaterpipe
+⊙ ${prefix}halloweenskeleton
+⊙ ${prefix}sketch
+⊙ ${prefix}bluecircuit
+⊙ ${prefix}space
+⊙ ${prefix}metallic
+⊙ ${prefix}fiction
+⊙ ${prefix}greenhorror
+⊙ ${prefix}transformer
+⊙ ${prefix}berry
+⊙ ${prefix}thunder
+⊙ ${prefix}magma
+⊙ ${prefix}3dcrackedstone
+⊙ ${prefix}3dneonlight
+⊙ ${prefix}impressiveglitch
+⊙ ${prefix}naturalleaves
+⊙ ${prefix}fireworksparkle
+⊙ ${prefix}matrix
+⊙ ${prefix}dropwater
+⊙ ${prefix}harrypotter
+⊙ ${prefix}foggywindow
+⊙ ${prefix}neondevils
+⊙ ${prefix}christmasholiday
+⊙ ${prefix}3dgradient
+⊙ ${prefix}blackpink
+⊙ ${prefix}gluetext
 
 「 VOICE CHANGER 」
 
-${prefix}bass
-${prefix}blown
-${prefix}deep
-${prefix}earrape
-${prefix}fast
-${prefix}fat
-${prefix}nightcore
-${prefix}reverse
-${prefix}robot
-${prefix}slow
-${prefix}tupai
+⊙ ${prefix}bass
+⊙ ${prefix}blown
+⊙ ${prefix}deep
+⊙ ${prefix}earrape
+⊙ ${prefix}fast
+⊙ ${prefix}fat
+⊙ ${prefix}nightcore
+⊙ ${prefix}reverse
+⊙ ${prefix}robot
+⊙ ${prefix}slow
+⊙ ${prefix}tupai
 
 「 WEBZONE 」
 
-${prefix}jadwaltv
-${prefix}playstore
-${prefix}gsmarena
-${prefix}jadwalbioskop
-${prefix}nowplayingbioskop
-${prefix}aminio
-${prefix}wattpad
-${prefix}webtoons
-${prefix}drakor
+⊙ ${prefix}jadwaltv
+⊙ ${prefix}playstore
+⊙ ${prefix}gsmarena
+⊙ ${prefix}jadwalbioskop
+⊙ ${prefix}nowplayingbioskop
+⊙ ${prefix}aminio
+⊙ ${prefix}wattpad
+⊙ ${prefix}webtoons
+⊙ ${prefix}drakor
 
 「 WALLPAPER 」
 
-${prefix}cyberspace
-${prefix}mountain
-${prefix}programming
-${prefix}technology
-${prefix}aesthetic
-${prefix}boneka
-${prefix}hekel
-${prefix}kucing
-${prefix}mobil
-${prefix}motor
-${prefix}pubg
-${prefix}wallhp`
+⊙ ${prefix}cyberspace
+⊙ ${prefix}mountain
+⊙ ${prefix}programming
+⊙ ${prefix}technology
+⊙ ${prefix}aesthetic
+⊙ ${prefix}boneka
+⊙ ${prefix}hekel
+⊙ ${prefix}kucing
+⊙ ${prefix}mobil
+⊙ ${prefix}motor
+⊙ ${prefix}pubg
+⊙ ${prefix}niwallhp`
             conn.sendMessage(m.chat, { image: thumb, caption: anu}, { qouted: fakestatus})
             }
             break
@@ -7472,7 +6696,7 @@ ${prefix}wallhp`
             break
                     case 'totalfitur':
                     case 'fitur': {
-                    let anu = `Total Fitur AdrianTzy Adalah ${totalFitur()}`
+                    let anu = `Total Fitur ClevvBotz Adalah ${totalFitur()}`
                     conn.sendMessage(m.chat, { image: thumb, caption: anu }, { qouted: fkontak })
                     }
                     break
@@ -7510,12 +6734,7 @@ ${prefix}wallhp`
         break
             default:
         if ((m.mtype === 'groupInviteMessage' || budy.startsWith('https://chat') || budy.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        	let buttons = [
-        	        { buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },
-        	        { buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },
-                    { buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }
-                ]
-			conn.sendMessage(m.chat, { text:`INVITE DETECT\n\nMau masukin bot ini ke group kamu?`, title: 'LINK GROUP DECTETED', footer: '© 2023 AdrianTzy', buttons: buttons, headerType: 5 })
+        	conn.sendMessage(m.chat, { text:`*INVITE DETECT*\n\nMau masukin bot ini ke group kamu?\n\nKetik ${prefix}sewa untuk melihat list sewa bot\nKetik ${prefix}owner untuk menghubungi owner melalui chat\nKetik ${prefix}rules untuk melihat peraturan memakai bot ini`, { quoted: m })
 		}
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return m.reply(mess.owner)

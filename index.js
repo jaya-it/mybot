@@ -71,7 +71,7 @@ async function startAdrian() {
     const conn = connConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Adrian Multi Device','Safari','1.0.0'],
+        browser: ['ClevvBotz System Device','Safari','1.0.0'],
         patchMessageBeforeSending: (message) => {
 
                 const requiresPatch = !!(
@@ -186,9 +186,9 @@ async function startAdrian() {
                 }
 
                if (anu.action == 'add') {
-                    conn.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Welcome @${num.split("@")[0]} To Group ${metadata.subject} 👋` })
+                    conn.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Selamat Datang @${num.split("@")[0]} Di Grup ${metadata.subject} 👋\n\nHarap intro ya\n\n*Nama*:\n*Umur*:\n*Gender*:` })
                 } else if (anu.action == 'remove') {
-                    conn.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Sayonaraa @${num.split("@")[0]} 👋` })
+                    conn.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Dadah @${num.split("@")[0]} 👋\nBalik lagi jangan lupa bawa gorengan yah😋` })
                 } else if (anu.action == 'promote') {
                     conn.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Selamat Ya @${num.split("@")[0]} Atas Kenaikan Jabatannya Di Grup ${metadata.subject} 🎉` })
                 } else if (anu.action == 'demote') {
