@@ -533,7 +533,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakasahotak[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Asah Otak 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak asahotak untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak asahotak',
+                    buttonText: {
+                        displayText: '⌲ Tebak Asah Otak'
+                    },
+                    type: 1
+                }], `🎮 Asah Otak 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakasahotak[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -545,7 +551,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksiapakahaku[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Siapakah Aku 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak siapakahaku untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak siapakahaku',
+                    buttonText: {
+                        displayText: '⌲ Tebak Siapkah Aku'
+                    },
+                    type: 1
+                }], `🎮 Siapakah Aku 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaksiapakahaku[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -557,7 +569,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak susunkata untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak susunkata',
+                    buttonText: {
+                        displayText: '⌲ Tebak Susun Kata'
+                    },
+                    type: 1
+                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -569,7 +587,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakbendera[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakbendera untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak bendera',
+                    buttonText: {
+                        displayText: '⌲ Tebak Bendera'
+                    },
+                    type: 1
+                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakbendera[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -581,7 +605,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakbendera2[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakbendera2 untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak bendera2',
+                    buttonText: {
+                        displayText: '⌲ Tebak Bendera 2'
+                    },
+                    type: 1
+                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakbendera2[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -593,7 +623,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkabupaten[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kabupaten 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kabupaten untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak kabupaten',
+                    buttonText: {
+                        displayText: '⌲ Tebak Kabupaten'
+                    },
+                    type: 1
+                }], `🎮 Tebak Kabupaten 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakkabupaten[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -605,7 +641,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak susunkata untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak susunkata',
+                    buttonText: {
+                        displayText: '⌲ Tebak Susun Kata'
+                    },
+                    type: 1
+                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaksusunkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -617,7 +659,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkimia[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kimia 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kimia untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak kimia',
+                    buttonText: {
+                        displayText: '⌲ Tebak Kimia'
+                    },
+                    type: 1
+                }], `🎮 Tebak Kimia 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakkimia[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -629,7 +677,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaktekateki[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Teka Teki 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tekateki untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak tekateki',
+                    buttonText: {
+                        displayText: '⌲ Tebak Teka Teki'
+                    },
+                    type: 1
+                }], `🎮 Teka Teki 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaktekateki[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -641,7 +695,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaklagu[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lagu untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak lagu',
+                    buttonText: {
+                        displayText: '⌲ Tebak Lagu'
+                    },
+                    type: 1
+                }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -665,7 +725,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakgambar[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak gambar untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak gambar',
+                    buttonText: {
+                        displayText: '⌲ Tebak Gambar'
+                    },
+                    type: 1
+                }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -677,7 +743,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkata[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kata untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak kata',
+                    buttonText: {
+                        displayText: '⌲ Tebak Kata'
+                    },
+                    type: 1
+                }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakkata[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -690,7 +762,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete caklontong[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lontong untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak lontong',
+                    buttonText: {
+                        displayText: '⌲ Tebak Lontong'
+                    },
+                    type: 1
+                }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete caklontong[m.sender.split('@')[0]]
                 delete caklontong_desk[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
@@ -703,7 +781,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak kalimat untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak kalimat',
+                    buttonText: {
+                        displayText: '⌲ Tebak Kalimat'
+                    },
+                    type: 1
+                }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -715,7 +799,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaklirik[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak lirik untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak lirik',
+                    buttonText: {
+                        displayText: '⌲ Tebak Lirik'
+                    },
+                    type: 1
+                }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaklirik[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -727,7 +817,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await m.reply('*Anda Telah menyerah*')
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else if (budy.toLowerCase() == jawaban) {
-                await conn.sendMessage(m.chat, { text: `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? Ketik ${prefix}tebak tebakan untuk bermain lagi`, { quoted: fakestatus })
+                await conn.sendButtonText(m.chat, [{
+                    buttonId: 'tebak tebakan',
+                    buttonText: {
+                        displayText: '⌲ Tebak Tebakan'
+                    },
+                    type: 1
+                }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, ntiktok, fakestatus)
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
@@ -743,7 +839,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (isgclink) return m.reply(`Ehh Maaf Gak Jadi, Link Group Ini Ternyata 😆`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
-                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -754,7 +849,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
-                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -765,7 +859,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
-                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -777,7 +870,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
-                conn.sendMessage(m.chat, { delete: m.key })
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -1385,7 +1477,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lagu` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lagu',
+                            buttonText: {
+                                displayText: '⌲ Tebak Lagu'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaklagu[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'gambar') {
@@ -1398,7 +1496,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak gambar` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak gambar',
+                            buttonText: {
+                                displayText: '⌲ Tebak Gambar'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakgambar[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kata') {
@@ -1411,7 +1515,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kata` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kata',
+                            buttonText: {
+                                displayText: '⌲ Tebak Kata'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kalimat') {
@@ -1424,7 +1534,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kalimat` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kalimat',
+                            buttonText: {
+                                displayText: '⌲ Tebak Kalimat'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakkalimat[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lirik') {
@@ -1437,7 +1553,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lirik` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lirik',
+                            buttonText: {
+                                displayText: '⌲ Tebak Lirik'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaklirik[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'tebakan') {
@@ -1450,7 +1572,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaktebakan[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak tebakan` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak tebakan',
+                            buttonText: {
+                                displayText: '⌲ Tebak Tebakan'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaktebakan[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaktebakan[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lontong') {
@@ -1464,7 +1592,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak lontong` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lontong',
+                            buttonText: {
+                                displayText: '⌲ Tebak Lontong'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete caklontong[m.sender.split('@')[0]]
                         delete caklontong_desk[m.sender.split('@')[0]]
                     }
@@ -1478,7 +1612,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.name)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakbendera[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak bendera` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak bendera',
+                            buttonText: {
+                                displayText: '⌲ Tebak Bendera'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakbendera[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakbendera[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'bendera2') {
@@ -1491,7 +1631,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakbendera2.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.name)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakbendera2[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak bendera2` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak bendera',
+                            buttonText: {
+                                displayText: '⌲ Tebak Bendera'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakbendera2[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakbendera2[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kabupaten') {
@@ -1504,7 +1650,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.title)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkabupaten[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kabupaten` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kabupaten',
+                            buttonText: {
+                                displayText: '⌲ Tebak Kabupaten'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkabupaten[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakkabupaten[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kimia') {
@@ -1517,7 +1669,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakkimia.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.lambang)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakkimia[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak kimia` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kimia',
+                            buttonText: {
+                                displayText: '⌲ Tebak Kimia'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkimia[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakkimia[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'asahotak') {
@@ -1530,7 +1688,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebakasahotak.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebakasahotak[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak asahotak` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak asahotak',
+                            buttonText: {
+                                displayText: '⌲ Tebak Asah Otak'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakasahotak[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebakasahotak[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'siapakahaku') {
@@ -1543,7 +1707,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaksiapakahaku.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaksiapakahaku[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak siapakahaku` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak siapakahaku',
+                            buttonText: {
+                                displayText: '⌲ Tebak Siapakah Aku'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaksiapakahaku[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaksiapakahaku[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'susunkata') {
@@ -1556,7 +1726,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaksusunkata[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak susunkata` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak susunkata',
+                            buttonText: {
+                                displayText: '⌲ Tebak Susun Kata'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaksusunkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaksusunkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'tekateki') {
@@ -1569,7 +1745,13 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await sleep(60000)
                     if (tebaktekateki.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        conn.sendMessage(m.chat, { text: `Waktu Habis\nJawaban:  ${tebaktekateki[m.sender.split('@')[0]]}\n\nIngin bermain? Ketik ${prefix}tebak tekateki` }, { quoted: fakestatus })
+                        conn.sendButtonText(m.chat, [{
+                            buttonId: 'tebak tekateki',
+                            buttonText: {
+                                displayText: '⌲ Tebak Teka Teki'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaktekateki[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, ntiktok, fakestatus)
                         delete tebaktekateki[m.sender.split('@')[0]]
                     }
                 }
@@ -1606,7 +1788,16 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
                 let ments = [me, jodoh]
-                await conn.sendMessage(m.chat, { text: jawab }, { quoted: fakestatus, mentions: ments })
+                let buttons = [{
+                    buttonId: 'jodohku',
+                    buttonText: {
+                        displayText: '⌲ Jodohku'
+                    },
+                    type: 1
+                }]
+                await conn.sendButtonText(m.chat, buttons, jawab, ntiktok, fakestatus, {
+                    mentions: ments
+                })
             }
             break
             case 'jadian': {
@@ -1620,7 +1811,16 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 
 @${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
                 let menst = [orang, jodoh]
-                await conn.sendMessage(m.chat, { text: jawab }, { quoted: fakestatus, mentions: ments })
+                let buttons = [{
+                    buttonId: 'jadian',
+                    buttonText: {
+                        displayText: '⌲ Jadiin'
+                    },
+                    type: 1
+                }]
+                await conn.sendButtonText(m.chat, buttons, jawab, ntiktok, fakestatus, {
+                    mentions: menst
+                })
             }
             break
             case 'tagmenu': {
@@ -1648,7 +1848,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let oranag = membear[Math.floor(Math.random() * membear.length)]
 					let teks = `Nih beban Grup @${oranag.split('@')[0]}`
 					let meanst = [oranag]
-                    await conn.sendMessage(m.chat, { text: teks }, { quoted: fakestatus, mentions: meanst })
+            let buttaons = [
+                        { buttonId: 'bebangrup', buttonText: { displayText: '⌲ Beban' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttaons, teks, ntiktok, fakestatus, {mentions: meanst})
                     }
             break
 			case 'babigrup': {
@@ -1657,7 +1860,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let orag = memberr[Math.floor(Math.random() * memberr.length)]
 					let ters = `Nih babi di Grup @${orag.split('@')[0]}, jangan baper yak:v`
 					let meansrt = [orag]
-                    await conn.sendMessage(m.chat, { text: ters }, { quoted: fakestatus, mentions: meansrt })
+            let buttns = [
+                        { buttonId: 'babigrup', buttonText: { displayText: '⌲ Babi' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttns, ters, ntiktok, fakestatus, {mentions: meansrt})
                     }
             break
 			case 'kerengrup': {
@@ -1666,7 +1872,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let oranng = krn[Math.floor(Math.random() * krn.length)]
 					let texx = `Wihh si keren kita nih 😎 @${oranng.split('@')[0]}`
 					let mesrt = [oranng]
-                    await conn.sendMessage(m.chat, { text: texx }, { quoted: fakestatus, mentions: mesrt })
+            let butons = [
+                        { buttonId: 'kerengrup', buttonText: { displayText: '⌲ Keren' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, butons, texx, ntiktok, fakestatus, {mentions: mesrt})
                     }
             break
 			case 'cantikgrup': {
@@ -1675,7 +1884,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap1 = cantik1[Math.floor(Math.random() * cantik1.length)]
 					let vio1 = `Wihh si paling cute dan cantik ☺ @${mantap1.split('@')[0]}`
 					let men1 = [mantap1]
-                    await conn.sendMessage(m.chat, { text: vio1 }, { quoted: fakestatus, mentions: men1 })
+            let butons1 = [
+                        { buttonId: 'cantikgrup', buttonText: { displayText: '⌲ Cantik' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, butons1, vio1, ntiktok, fakestatus, {mentions: men1})
                     }
             break
 			case 'gantenggrup': {
@@ -1684,7 +1896,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap2 = gtg1[Math.floor(Math.random() * gtg1.length)]
 					let vio2 = `Anjayyy sungkem si paling ganteng😎😆 @${mantap2.split('@')[0]}`
 					let men2 = [mantap2]
-                    await conn.sendMessage(m.chat, { text: vio2 }, { quoted: fakestatus, mentions: men2 })
+            let butons2 = [
+                        { buttonId: 'gantenggrup', buttonText: { displayText: '⌲ Ganteng' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, butons2, vio2, ntiktok, fakestatus, {mentions: men2})
                     }
             break
 			case 'pintargrup': {
@@ -1693,7 +1908,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap3 = pintaar[Math.floor(Math.random() * pintaar.length)]
 					let vio3 = `Ayo belajar biar pinter kek @${mantap3.split('@')[0]}`
 					let men3 = [mantap3]
-                    await conn.sendMessage(m.chat, { text: vio3 }, { quoted: fakestatus, mentions: men3 })
+            let butons3 = [
+                        { buttonId: 'pintargrup', buttonText: { displayText: '⌲ Pintar' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, butons3, vio3, ntiktok, fakestatus, {mentions: men3})
                     }
             break
 			case 'wibugrup': {
@@ -1702,7 +1920,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 					let mantap4 = wibu[Math.floor(Math.random() * wibu.length)]
 					let vio4 = `Anjayy si pemuja anime @${mantap4.split('@')[0]}`
 					let men4 = [mantap4]
-                    await conn.sendMessage(m.chat, { text: vio4 }, { quoted: fakestatus, mentions: men4 })
+            let butons4 = [
+                        { buttonId: 'wibugrup', buttonText: { displayText: '⌲ WIBU' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, butons4, vio4, ntiktok, fakestatus, {mentions: men4})
                     }
             break
             case 'react': {
@@ -1718,7 +1939,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
             case 'shutdown': {
              if (!isCreator) return mess.owner
-			 m.reply(`Bot ini akan dimatikan\n\nSayonara👋`)
+			 m.reply(`Otsukaresama deshita🖐`)
              await sleep(3000)
              process.exit()
              }
@@ -1938,7 +2159,22 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilink = false
                     m.reply(`Antilink Group WhatsApp Nonaktif 🕊️`)
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
+                    let buttons = [{
+                            buttonId: 'antilink on',
+                            buttonText: {
+                                displayText: 'On'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'antilink off',
+                            buttonText: {
+                                displayText: 'Off'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
                 }
             }
             break
@@ -1955,7 +2191,22 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilinkyt = false
                     m.reply(`Antilink YouTube Nonaktif 🕊️`)
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
+                    let buttons = [{
+                            buttonId: 'antilinkyt on',
+                            buttonText: {
+                                displayText: 'On'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'antilinkyt off',
+                            buttonText: {
+                                displayText: 'Off'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
                 }
             }
             break
@@ -1972,7 +2223,22 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].antilinktt = false
                     m.reply(`Antilink TikTok Nonaktif 🕊️`)
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
+                    let buttons = [{
+                            buttonId: 'antilinktt on',
+                            buttonText: {
+                                displayText: 'On'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'antilinktt off',
+                            buttonText: {
+                                displayText: 'Off'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
                 }
             }
             break
@@ -1989,7 +2255,22 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     db.data.chats[m.chat].mute = false
                     m.reply(`${ntiktok} telah di unmute di group ini 🕊️`)
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Mode ${command} 🕊️`, `Silahkan Ketik ${command} on/off` }, { quoted: fgclink })
+                    let buttons = [{
+                            buttonId: 'mute on',
+                            buttonText: {
+                                displayText: 'On'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'mute off',
+                            buttonText: {
+                                displayText: 'Off'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} on/off`, ntiktok, fgclink)
                 }
             }
             break
@@ -2006,7 +2287,18 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 } else if (args[0] === 'off') {
                     await conn.groupToggleEphemeral(m.chat, 0).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                conn.sendMessage(m.chat, { text: `Silakan pilih fitur pesan sementara\n\n• 1 Hari = ${prefix}${command} 1\n• 7 Hari = ${prefix}${command} 7\n• 90 Hari = ${prefix}${command} 90\n• Mematikan pesan sementara = ${prefix}${command} off\n\n*Pilih salah satu diatas untuk menerapkan fitur pesan sementara*`
+                let sections = [
+                {
+                title: "CHANGE EFFECTIVE GROUP",
+                rows: [
+                {title: "⌲ Ephemeral 1 day", rowId: `ephemeral 1`, description: `Activate the ephemeral group for 1 day`},
+                {title: "⌲ Ephemeral 7 day's", rowId: `ephemeral 7`, description: `Activate the ephemeral group for 7 day's`},
+                {title: "⌲ Ephemeral 90 days's", rowId: `ephemeral 90`, description: `Activate the ephemeral group for 90 day's`},
+                {title: "⌲ Ephemeral Off", rowId: `ephemeral off`, description: `Deactivate this Ephemeral group`}
+                ]
+                },
+                ]
+                conn.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, ntiktok, `Hello Admin ${groupMetadata.subject}`, `Touch Me (⁠≧⁠▽⁠≦⁠)`, sections, floc)
                 }
             }
             break
@@ -2074,7 +2366,29 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 *${prefix}devote* - Untuk Tidak
 *${prefix}cekvote* - Untuk Mengecek Vote
 *${prefix}hapusvote* - Untuk Menghapus Vote`
-                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
+                let buttonsVote = [{
+                        buttonId: `${prefix}upvote`,
+                        buttonText: {
+                            displayText: '⌲ Upvote'
+                        },
+                        type: 1
+                    },
+                    {
+                        buttonId: `${prefix}devote`,
+                        buttonText: {
+                            displayText: '⌲ Devote'
+                        },
+                        type: 1
+                    }
+                ]
+
+                let buttonMessageVote = {
+                    text: teks_vote,
+                    footer: ntiktok,
+                    buttons: buttonsVote,
+                    headerType: 1
+                }
+                conn.sendMessage(m.chat, buttonMessageVote)
             }
             break
             case 'upvote': {
@@ -2109,7 +2423,30 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 *${prefix}hapusvote* - Untuk Menghapus Vote
 
 ©${conn.user.id}`
-                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
+                let buttonsUpvote = [{
+                        buttonId: `${prefix}upvote`,
+                        buttonText: {
+                            displayText: '⌲ Upvote'
+                        },
+                        type: 1
+                    },
+                    {
+                        buttonId: `${prefix}devote`,
+                        buttonText: {
+                            displayText: '⌲ Devote'
+                        },
+                        type: 1
+                    }
+                ]
+
+                let buttonMessageUpvote = {
+                    text: teks_vote,
+                    footer: ntiktok,
+                    buttons: buttonsUpvote,
+                    headerType: 1,
+                    mentions: menvote
+                }
+                conn.sendMessage(m.chat, buttonMessageUpvote)
             }
             break
             case 'devote': {
@@ -2144,7 +2481,30 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 *${prefix}hapusvote* - Untuk Menghapus Vote
 
 ©${conn.user.id}`
-                conn.sendTextWithMentions(m.chat, teks_vote, fgclink)
+                let buttonsDevote = [{
+                        buttonId: `${prefix}upvote`,
+                        buttonText: {
+                            displayText: '⌲ Upvote'
+                        },
+                        type: 1
+                    },
+                    {
+                        buttonId: `${prefix}devote`,
+                        buttonText: {
+                            displayText: '⌲ Devote'
+                        },
+                        type: 1
+                    }
+                ]
+
+                let buttonMessageDevote = {
+                    text: teks_vote,
+                    footer: ntiktok,
+                    buttons: buttonsDevote,
+                    headerType: 1,
+                    mentions: menvote
+                }
+                conn.sendMessage(m.chat, buttonMessageDevote)
             }
             break
 
@@ -2197,7 +2557,23 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 } else if (args[0] === 'open') {
                     await conn.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group 🕊️`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Silahkan Ketik ${command} open/close` }, { quoted: fgclink })
+                    let buttons = [{
+                            buttonId: 'group open',
+                            buttonText: {
+                                displayText: 'Open'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'group close',
+                            buttonText: {
+                                displayText: 'Close'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode ${command} 🕊️`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} open/close`, fgclink)
+
                 }
             }
             break
@@ -2210,7 +2586,23 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 } else if (args[0] === 'close') {
                     await conn.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group 🕊️`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
-                    await conn.sendMessage(m.chat, { text: `Silahkan Ketik ${command} open/close` }, { quoted: fgclink })                    
+                    let buttons = [{
+                            buttonId: 'editinfo open',
+                            buttonText: {
+                                displayText: 'Open'
+                            },
+                            type: 1
+                        },
+                        {
+                            buttonId: 'editinfo close',
+                            buttonText: {
+                                displayText: 'Close'
+                            },
+                            type: 1
+                        }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `Mode Edit Info 🔥`, `Silahkan Klik Button Dibawah, Jika Button Tidak Muncul Ketik ${command} open/close`, fgclink)
+
                 }
             }
             break
@@ -2252,21 +2644,23 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
                 for (let i of anu) {
                     await sleep(1500)
-                      let txt = `「 Group Broadcast 」\n\n${text}`
-                      await conn.sendMessage(i, { text: txt }, { quoted: fkontak })
+                      let txt = `「 Broadcast Bot 」\n\n${text}`
+                      let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
+await conn.sendButtonText(i, buttons, txt, ntiktok, m, {quoted: fkontak})
                 }
                 m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
                 if (!isCreator) return mess.owner
-                if (!text) return `Textnya mana?\n\nContoh : ${prefix + command} Akame ><`
+                if (!text) return `Text mana?\n\nContoh : ${prefix + command} Akame ><`
                 let anu = await store.chats.all().map(v => v.id)
                 m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
 		for (let yoi of anu) {
 		    await sleep(1500)
-		              let txt = `「 Broadcast 」\n\n${text}`
-                      await conn.sendMessage(yoi, { text: txt }, { quoted: fkontak })
+		              let txt = `「 Broadcast Bot 」\n\n${text}`
+                      let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
+            await conn.sendButtonText(yoi, buttons, txt, ntiktok, m, {quoted: fkontak})
                 }
 		m.reply('Sukses Broadcast')
             }
@@ -2780,20 +3174,40 @@ break
                 gis(text, async (error, result) => {
                     n = result
                     images = n[Math.floor(Math.random() * n.length)].url
-                    conn.sendMessage(m.chat, { image: { url: images }, caption: `*-------「 GIMAGE SEARCH 」-------*\n🤠 *Query* : ${text}\n🔗 *Media Url* : ${images}` }, { quoted: fdoc })
+                    let buttons = [{
+                        buttonId: `gimage ${text}`,
+                        buttonText: {
+                            displayText: '⌲ Next Image'
+                        },
+                        type: 1
+                    }]
+                    let buttonMessage = {
+                        image: {
+                            url: images
+                        },
+                        caption: `*-------「 GIMAGE SEARCH 」-------*\n🤠 *Query* : ${text}\n🔗 *Media Url* : ${images}`,
+                        footer: ntiktok,
+                        buttons: buttons,
+                        headerType: 4
+                    }
+                    conn.sendMessage(m.chat, buttonMessage, {
+                        quoted: fdoc
+                    })
                 })
             }
             break
             case 'play': case 'ytplay': {
                 if (!text) return `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
-                let { play } = require('./lib/y2mate')
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-                let quality = args[1] ? args[1] : '128kbps'
-                let media = await play(anu.url, quality)
-                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-                let capt = `
+                let buttons = [
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
+                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: anu.thumbnail },
+                    caption: `
 📄 Title : ${anu.title}
 🔎 Ext : Search
 📀 ID : ${anu.videoId}
@@ -2803,9 +3217,12 @@ break
 👨‍🎤 Author : ${anu.author.name}
 💻 Channel : ${anu.author.url}
 💬 Description : ${anu.description}
-🔗 Url : ${anu.url}`
-                conn.sendMessage(m.chat, { image: { url: anu.thumbnail }, caption: caption }, { quoted: m })
-                conn.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+🔗 Url : ${anu.url}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
 	    case 'ytmp3': case 'ytaudio': {
@@ -2870,7 +3287,17 @@ break
 		        let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                conn.sendMessage(m.chat, { image: { url: result }, caption: `*${text}*` }, { quoted: fgclink })
+                let buttons = [                   
+                    {buttonId: `pinterest ${text}`, buttonText: {displayText: '⌲ NEXT'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: result },
+                    caption: `*Klik Next Untuk Melanjutkan*`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
             }
             break
             //Anime/Wibu
@@ -2889,28 +3316,92 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: { url: api('zahwa', '/randomanime/' + command, {}, 'apikey') }, caption: `Random Image ${command}`, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `${command}`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: { url: api('zahwa', '/randomanime/' + command, {}, 'apikey') },
+                    caption: `Random Image ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'kitagawa': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/marin-kitagawa', {}, 'apikey') }, caption: `Random Image Marin Kitagawa`, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `kitagawa`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: { url: api('zahwa', '/randomanime/marin-kitagawa', {}, 'apikey') },
+                    caption: `Random Image Marin Kitagawa`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'calliope': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/mori-calliope', {}, 'apikey') }, caption: `Random Image Mori Calliope`, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `calliope`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: { url: api('zahwa', '/randomanime/mori-calliope', {}, 'apikey') },
+                    caption: `Random Image Mori Calliope`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'raiden': {
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: url: api('zahwa', '/randomanime/raiden-shogun', {}, 'apikey') }, caption: `Random Image Raiden Shogun`, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `raiden`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: { url: api('zahwa', '/randomanime/raiden-shogun', {}, 'apikey') },
+                    caption: `Random Image Raiden Shogun`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'hutao': case 'xiao': case 'chongyun': case 'baal': case 'keqing': case 'yae': case 'zhongli': case 'ningguang': case 'shenhe': case 'ayaka': {
@@ -2921,15 +3412,40 @@ break
                 gis(command + 'Icon HD', async (error, result) => {
                 n = result
                 images = n[Math.floor(Math.random() * n.length)].url
-                conn.sendMessage(m.chat, { image: { url: images }, caption: `Random Image ${command}` }, { quoted: fdoc })
+                let buttons = [
+                            {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
+                        ]
+                        let buttonMessage = {
+                            image: { url: images },
+                            caption: `Random Image ${command}`, 
+                            footer: ntiktok,
+                            buttons: buttons,
+                            headerType: 4
+                        }
+                        conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
                 })
                 }
                 break
-            case 'sfw': case: 'waifu': {
+            case 'waifu': {
+            	tesk = `*${ucapanWaktu} Kak ${pushname}*\n*Silahkan Pilih Dibawah Ini*\n\n_Dosa Tanggung Sendiri :v_`
+            	let buttons = [{buttonId: `menu`, buttonText: {displayText: '📚MENU'}, type: 1},{buttonId: `sfw`, buttonText: {displayText: '✅SFW'}, type: 1}]
+                await conn.sendButtonText(m.chat, buttons, tesk, ntiktok, m, {quoted: fkontak})
+            	}
+            break
+            case 'sfw': {
             	m.reply(mess.wait)
                 anu = await fetchJson(`https://waifu.pics/api/sfw/waifu`)
                 buffer = await getBuffer(anu.url)
-                conn.sendMessage(m.chat, { image: buffer }, caption: `Random Waifu` }, { quoted: fdoc })
+                let buttons = [{buttonId: `sfw`, buttonText: {displayText: '⌲ Next Image'}, type: 1},{buttonId: `command`, buttonText: {displayText: '📮Menu'}, type: 1}]
+                let buttonMessage = {
+                    image: buffer,
+                    fileLength: jumlah,
+                    caption: `Random Waifu`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
             }
             break
             //Tambahan Anime
@@ -2984,7 +3500,17 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Random%20Anime/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Anime ${command}` }, { quoted: fdoc })
+                let buttons = [                   
+                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: result },
+                    caption: `Random Anime ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
             }
             break
             //Random
@@ -3008,7 +3534,17 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Random%20Image/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Image ${command}` }, { quoted: fdoc })
+                let buttons = [                   
+                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: result },
+                    caption: `Random Image ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
             }
             break
             //Wallpaper
@@ -3021,7 +3557,17 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Wallpaper/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Wallpaper ${command}` }, { quoted: fdoc })
+                let buttons = [                   
+                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: result },
+                    caption: `Random Wallpaper ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
             }
             break
             //Meme
@@ -3032,7 +3578,23 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: { url: api('zahwa', '/randomimage/' + command, {}, 'apikey') }, caption: `Random Image ${command}` }, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `${command}`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: { url: api('zahwa', '/randomimage/' + command, {}, 'apikey') },
+                    caption: `Random Image ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             //Asupan
@@ -3050,7 +3612,17 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(`https://raw.githubusercontent.com/Abuzzpoet/Databasee/main/Cecan/${command}.json`)
                 result = anu[Math.floor(Math.random() * anu.length)]               
-                conn.sendMessage(m.chat, { image: { url: result }, caption: `Random Asupan ${command}` }, { quoted: fdoc })
+                let buttons = [                   
+                    {buttonId: `${command}`, buttonText: {displayText: '⌲ Next Image'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: result },
+                    caption: `Random Asupan ${command}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fdoc })
             }
             break
                 case 'couple': {
@@ -3082,7 +3654,25 @@ break
                 m.reply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
-                conn.sendMessage(m.chat, { image: { url: 'https://coffee.alexflipnote.dev/random' }, caption: `☕ Random Coffe` }, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `coffe`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: {
+                        url: 'https://coffee.alexflipnote.dev/random'
+                    },
+                    caption: `☕ Random Coffe`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'wallpaper': {
@@ -3095,7 +3685,25 @@ break
                 } = require('./lib/scraper')
                 anu = await wallpaper(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                conn.sendMessage(m.chat, { image: { url: result.image[0] }, caption: `• Title : ${result.title}\n• Category : ${result.type}\n• Detail : ${result.source}\n• Media Url : ${result.image[2] || result.image[1] || result.image[0]}` }, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `wallpaper ${text}`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: {
+                        url: result.image[0]
+                    },
+                    caption: `• Title : ${result.title}\n• Category : ${result.type}\n• Detail : ${result.source}\n• Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'wikimedia': {
@@ -3108,7 +3716,25 @@ break
                 } = require('./lib/scraper')
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                conn.sendMessage(m.chat, { image: { url: result.image }, caption: `📄 Judul : ${result.title}\n📬 Sumber : ${result.source}\n🔗 Media Url : ${result.image}` }, { quoted: fdoc })
+                let buttons = [{
+                    buttonId: `wikimedia ${text}`,
+                    buttonText: {
+                        displayText: '⌲ Next Image'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    image: {
+                        url: result.image
+                    },
+                    caption: `📄 Judul : ${result.title}\n📬 Sumber : ${result.source}\n🔗 Media Url : ${result.image}`,
+                    footer: ntiktok,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fdoc
+                })
             }
             break
             case 'quotesanime':
@@ -3121,7 +3747,22 @@ break
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
-                conn.sendMessage(m.chat, { text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}` }, { quoted: fakestatus })
+                let buttons = [{
+                    buttonId: `quotesanime`,
+                    buttonText: {
+                        displayText: '⌲ Next Quotes'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
+                    footer: 'Quotes By ClevvBotz',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fakestatus
+                })
             }
             break
             case 'animequotes':
@@ -3130,7 +3771,22 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/animequotes2', {}, 'apikey'))
-                conn.sendMessage(m.chat, { text: `~_${anu.result.quotes}_\n\nBy '${anu.result.character}', ${anu.result.anime}\n\n- ${anu.result.episode}` }, { quoted: fgclink })
+                let buttons = [{
+                    buttonId: `animequotes`,
+                    buttonText: {
+                        displayText: '⌲ Next Quotes'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    text: `~_${anu.result.quotes}_\n\nBy '${anu.result.character}', ${anu.result.anime}\n\n- ${anu.result.episode}`,
+                    footer: 'Quotes By ClevvBotz',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fgclink
+                })
             }
             break
             case 'motivasi':
@@ -3151,7 +3807,22 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/' + command, {}, 'apikey'))
-                conn.sendMessage(m.chat, { text: anu.result.message }, { quoted: fgclink })
+                let buttons = [{
+                    buttonId: `${command}`,
+                    buttonText: {
+                        displayText: '⌲ Next Quotes'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    text: anu.result.message,
+                    footer: 'Quotes By ClevvBotz',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fgclink
+                })
             }
             break
             case 'cerpen': {
@@ -3159,7 +3830,22 @@ break
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zahwa', '/randomtext/' + command, {}, 'apikey'))
-                conn.sendMessage(m.chat, { text: `Judul : ${anu.result.Judul}\nPenulis : ${anu.result.Penulis}\n\n${anu.result.cerita}` }, { quoted: fgclink })
+                let buttons = [{
+                    buttonId: `${command}`,
+                    buttonText: {
+                        displayText: '⌲ Next Quotes'
+                    },
+                    type: 1
+                }]
+                let buttonMessage = {
+                    text: `Judul : ${anu.result.Judul}\nPenulis : ${anu.result.Penulis}\n\n${anu.result.cerita}`,
+                    footer: 'Quotes By ClevvBotz',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                conn.sendMessage(m.chat, buttonMessage, {
+                    quoted: fgclink
+                })
             }
             break
             case '3dchristmas':
@@ -3565,14 +4251,16 @@ break
             var m3 = mon.split("|")[2]
                let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: 'Lokasimu', jpegThumbnail: thumb}}}
                let mq1 = m1 + '@s.whatsapp.net'
-               let kawk = '*PESAN RAHASIA*'
+               let kawk = ('PESAN RAHASIA')
                let ownernya = ownernomer + '@s.whatsapp.net'
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `👤Pesan Dari : ${m2} \n💞Untuk : @${mq1.split('@')[0]}\n💌Isi Pesan :\n${m3}`
-            await conn.sendMessage(m1 + '@s.whatsapp.net', { text: pjtxt + '\n\n' + kawk }, {mentions: ments, quoted: kafloc})
+               let buttons1 = [{ buttonId: `menfesconfirm ${me}`, buttonText: { displayText: '⌲ Terima Menfess' }, type: 1 },{ buttonId: 'hehehe', buttonText: { displayText: '❤LIKE' }, type: 1 }]
+            await conn.sendButtonText(m1 + '@s.whatsapp.net', buttons1, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
-            await conn.sendMessage(m.chat, { text: akhji }, m, {mentions: ments})
+            let buttons2 = [{ buttonId: 'hehehe', buttonText: { displayText: '❤LIKE' }, type: 1 }]
+            await conn.sendButtonText(m.chat, buttons2, akhji, ntiktok, m, {mentions: ments})
             }
             break
             case 'menfesconfirm': {
@@ -3620,14 +4308,34 @@ break
                 if (!text) return 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zahwa', '/api/downloader/twitter', { url: text }, 'apikey'))
-                conn.sendMessage(m.chat, { video: { url: anu.result.HD || anu.result.SD }, caption: util.format(anu.result) }, { quoted: fgclink })
+                let buttons = [
+                    {buttonId: `twittermp3 ${text}`, buttonText: {displayText: '⌲ Audio'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video: { url: anu.result.HD || anu.result.SD },
+                    caption: util.format(anu.result),
+                    footer: 'Press The Button Below',
+                    buttons: buttons,
+                    headerType: 5
+                }
+                conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
             }
             break
             case 'twittermp3': case 'twitteraudio': {
                 if (!text) return 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zahwa', '/api/downloader/twitter', { url: text }, 'apikey'))
-                conn.sendMessage(m.chat, { image: { url: anu.result.thumb }, caption: util.format(anu.result) }, { quoted: fgclink })
+                let buttons = [
+                    {buttonId: `twitter ${text}`, buttonText: {displayText: '⌲ Video'}, type: 1}
+                ]
+                let buttonMessage = {
+		            image: { url: anu.result.thumb },
+                    caption: util.format(anu.result),
+                    footer: 'Press The Button Below',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
                 conn.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: fvn })
             }
             break
@@ -3636,7 +4344,25 @@ break
                 let { umma } = require('./lib) scraper')
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
-		    conn.sendMessage(m.chat, { image: { url: anu.author.profilePic }, caption: `• Title : ${anu.title}\n• Author : ${anu.author.name}\n• Like : ${anu.like}\n• Caption : ${anu.caption}\n• Url : ${anu.media[0]}\n\nUntuk Download Media Silahkan Masukkan Command ytmp3/ytmp4 Dengan Url Diatas` }, { quoted: fgclink })
+		    let buttons = [
+                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '♫ Audio'}, type: 1},
+                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '⌲ Video'}, type: 1}
+                    ]
+		    let buttonMessage = {
+		        image: { url: anu.author.profilePic },
+			caption: `
+• Title : ${anu.title}
+• Author : ${anu.author.name}
+• Like : ${anu.like}
+• Caption : ${anu.caption}
+• Url : ${anu.media[0]}
+Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
+`,
+			footer: ntiktok,
+			buttons,
+			headerType: 4
+		    }
+		    conn.sendMessage(m.chat, buttonMessage, { quoted: fgclink })
 		} else if (anu.type == 'image') {
 		    anu.media.map(async (url) => {
 		        conn.sendMessage(m.chat, { image: { url }, caption: `• Title : ${anu.title}\n• Author : ${anu.author.name}\n• Like : ${anu.like}\n• Caption : ${anu.caption}` }, { quoted: fgclink })
@@ -3928,34 +4654,47 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
             break
             case 'anonymous': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
-                conn.sendMessage(m.chat, { text: { `\`\`\`Hi ${await conn.getName(m.sender)} Welcome To Anonymous Chat\n\nKetik ${command} Untuk Mencari Partner\`\`\``, { quoted: m })
+				let buttons = [
+                    { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
+                ]
+                conn.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await conn.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, ntiktok, m)
             }
 			break
             case 'keluar': case 'leave': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 let room = Object.values(db.data.anonymous).find(room => room.check(m.sender))
                 if (!room) {
-                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner \`\`\`` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner \`\`\``)
                     return false
                 }
                 m.reply('Ok')
                 let other = room.other(m.sender)
                 if (other) await conn.sendText(other, `\`\`\`Partner Telah Meninggalkan Sesi Anonymous\`\`\``, m)
                 delete db.data.anonymous[room.id]
+                if (command === 'leave') break
             }
-            break
             case 'mulai': case 'start': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 if (Object.values(db.data.anonymous).find(room => room.check(m.sender))) {
-                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\`` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, ntiktok, m)
                     return false
                 }
                 let room = Object.values(db.data.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    await conn.sendMessage(room.a, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await conn.sendMessage(room.b, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
+                    await conn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
                 } else {
                     let id = + new Date
                     db.data.anonymous[id] = {
@@ -3970,7 +4709,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    await conn.sendMessage(m.chat, { text: `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\`` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, ntiktok, m)
                 }
                 break
             }
@@ -3978,7 +4720,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 let romeo = Object.values(db.data.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
-                    await conn.sendMessage(m.chat, { text: `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner\`\`\`` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner\`\`\``)
                     return false
                 }
                 let other = romeo.other(m.sender)
@@ -3986,10 +4731,14 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 delete db.data.anonymous[romeo.id]
                 let room = Object.values(db.data.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    await conn.sendMessage(room.a, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await conn.sendMessage(room.b, { text: `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\`\n\n*Ketik ${prefix}leave untuk mengakhiri chat*\n*Ketik ${prefix}next untuk mencari partner baru*` }, { quoted: m })
+                    await conn.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, ntiktok, m)
                 } else {
                     let id = + new Date
                     db.data.anonymous[id] = {
@@ -4004,7 +4753,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    await conn.sendMessage(m.chat, { text: `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\`` }, { quoted: m })
+                    let buttons = [
+                        { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+                    await conn.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, ntiktok, m)
                 }
                 break
             }
@@ -4026,8 +4778,23 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 break
             case 'nulis': {
                 if (!q) return m.reply(`Teks Nya Apa Kak?`)
-                let sections = `*Pilihan yang tersedia*\n\n• ${prefix}nuliskanan\n• ${prefix}nuliskiri\n\n*Kertas folio*\n\n• ${prefix}foliokanan\n• ${prefix}foliokiri\n\n_Pilih salah satu dari list diatas untuk melanjutkan_`
-                m.reply(sections)
+                let sections = [
+                {
+                title: "Nulis Buku >_<",
+                rows: [
+                {title: "⌲ 「 Nulis Kanan 」", rowId: `${prefix}nuliskanan ${q}`},
+                {title: "⌲ 「 Nulis Kiri 」", rowId: `${prefix}nuliskiri ${q}`}
+                ]
+                },
+                {
+                title: "Nulis Folio >_<",
+                rows: [
+                {title: "⌲ 「 Folio Kanan 」", rowId: `${prefix}foliokanan ${q}`},
+                {title: "⌲ 「 Folio Kiri 」", rowId: `${prefix}foliokiri ${q}`}
+                ]
+                }
+                ]
+                conn.sendListMsg(m.chat, `*Silahkan Pilih Menu Dibawah Ini*`, ntiktok, `NULIS MENU`, `Touch Me (⁠≧⁠▽⁠≦⁠)`, sections, floc)
               }
             break
             case 'nuliskiri': {
@@ -4171,9 +4938,10 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                let me = m.sender
                let pjtxt = `Pesan Dari : @${me.split('@')[0]} \nUntuk : @${ownernya.split('@')[0]}\n\n${command} ${text}`
                let ments = [ownernya, me]
-            await conn.sendMessage(ownernya, { text: pjtxt }, { quoted: fdoc, mentions: ments })
+               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: '🙏THANKS' }, type: 1 }]
+            await conn.sendButtonText(ownernya, buttons, pjtxt, ntiktok, m, {mentions: ments, quoted: fdoc})
             let akhji = `*Request Telah Terkirim*\n*Ke Owner @${ownernya.split('@')[0]}*\n_Terima Kasih🙏_`
-            await conn.sendMessage(m.chat, { text: akhji }, { quoted: fkontak, mentions: ments })
+            await conn.sendButtonText(m.chat, buttons, akhji, ntiktok, m, {mentions: ments, quoted: fkontak})
             }
             break
             case 'report': case 'lapor': {
@@ -4182,9 +4950,10 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                let me = m.sender
                let pjtxt = `Pesan Dari : @${me.split('@')[0]} \nUntuk : @${ownernya.split('@')[0]}\n\n${text}`
                let ments = [ownernya, me]
-            await conn.sendMessage(ownernya, { text: pjtxt }, { quoted: m, mentions: ments })
+               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: '🙏THANKS LAPORANNYA' }, type: 1 }]
+            await conn.sendButtonText(ownernya, buttons, pjtxt, ntiktok, m, {mentions: ments})
             let akhji = `Laporan Telah Terkirim\nKe Owner @${ownernya.split('@')[0]}\n*Terima Kasih Laporannya🙏*\n_Nomermu Akan Terblokir_\n_Jika Laporan Hanya Di Buat Buat_`
-            await conn.sendMessage(m.chat, { text: akhji } , { quoted: m, mentions: ments })
+            await conn.sendButtonText(m.chat, buttons, akhji, ntiktok, m, {mentions: ments})
             }
             break
             case 'hehehe': {
@@ -4198,7 +4967,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'ceklimit': case 'checklimit': case 'limit':{
-					m.reply('*Sisa limit anda saat ini :* ' + (db.data.users[m.sender].limit))
+					m.reply('*Limit Lu :* ' + (db.data.users[m.sender].limit))
 					}
 					break 
 		    case 'totalhit': case 'hit': {
@@ -4595,7 +5364,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │3. Mengeksploitasi Terhadap bot.
 │Sanksi: BLOCK PERMANENT
 └──────────────┈❖`
-                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
+                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
+            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, m, {quoted: fkontak})
             }
             break
             case 'sewa':
@@ -4628,7 +5398,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │└─────────────┈❖
 │• Chat » Bukti Pembayaran » Bot Join
 └──────────────┈❖`
-                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
+                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
+            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, fkontak)
             }
             break
             case 'donasi':
@@ -4652,7 +5423,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │
 │ *Terima Kasih*
 └──────────────┈❖`
-                await conn.sendMessage(m.chat, { text: anu }, { quoted: fkontak })
+                let buttons = [{ buttonId: 'menu', buttonText: { displayText: '📮Menu' }, type: 1 },{ buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }]
+            await conn.sendButtonText(m.chat, buttons, anu, ntiktok, fkontak)
             }
             break
             case 'newfitur': {
@@ -5601,7 +6373,7 @@ ${prefix}onecak`
  ❑ Name : ${global.namabot}
  ❑ Owner : ${global.namaowner}
  ❑ Prefix : ( ${prefix} )
- ❑ Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode ??'}
+ ❑ Mode : ${conn.public ? 'Public-Mode 👥' : 'Self-Mode 👤'}
  ❑ Platform : ${os.platform()}
  ❑ Runtime : ${runtime(process.uptime())}
  ❑ Language : Javascript
@@ -6734,7 +7506,12 @@ ${readmore}
         break
             default:
         if ((m.mtype === 'groupInviteMessage' || budy.startsWith('https://chat') || budy.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        	conn.sendMessage(m.chat, { text:`*INVITE DETECT*\n\nMau masukin bot ini ke group kamu?\n\nKetik ${prefix}sewa untuk melihat list sewa bot\nKetik ${prefix}owner untuk menghubungi owner melalui chat\nKetik ${prefix}rules untuk melihat peraturan memakai bot ini`, { quoted: m })
+        	let buttons = [
+        	        { buttonId: 'sewa', buttonText: { displayText: '👑Sewa' }, type: 1 },
+        	        { buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },
+                    { buttonId: 'owner', buttonText: { displayText: '⭐Owner' }, type: 1 }
+                ]
+			conn.sendMessage(m.chat, { text:`INVITE DETECT\n\nMau masukin bot ini ke group kamu?`, title: 'LINK GROUP DECTETED', footer: '© 2023 ClevvBotz', buttons: buttons, headerType: 5 })
 		}
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return m.reply(mess.owner)
