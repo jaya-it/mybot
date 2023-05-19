@@ -839,6 +839,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (isgclink) return m.reply(`Ehh Maaf Gak Jadi, Link Group Ini Ternyata 😆`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -849,6 +850,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -859,6 +861,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
@@ -870,6 +873,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 if (!isBotAdmins) return m.reply(`Ehh Bot Gak Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Maaf Ternyata Kamu Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Maaf Kamu Ownerku Ternyata 😅`)
+                await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant }})
                 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
             }
         }
